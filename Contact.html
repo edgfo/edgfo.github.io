@@ -1,40 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Contact Us | EDGF</title>
 
-    <meta name="description" content="Contact Enterprise Development & Governance Facility (EDGF).">
+    <meta
+        name="description"
+        content="Contact Enterprise Development & Governance Facility (EDGF)."
+    >
 
     <link rel="stylesheet" href="style.css">
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            line-height: 1.7;
-            color: #222;
-            background: #fff;
-        }
 
         /* =========================
-           HERO
+           CONTACT PAGE
         ========================= */
 
         .page-hero {
             background:
-                linear-gradient(rgba(0,60,45,0.80), rgba(0,60,45,0.80)),
+                linear-gradient(
+                    rgba(0,60,45,0.80),
+                    rgba(0,60,45,0.80)
+                ),
                 url("https://images.unsplash.com/photo-1423666639041-f56000c27a9a?auto=format&fit=crop&w=1600&q=80")
                 center/cover no-repeat;
 
@@ -54,48 +47,12 @@
             font-size: 19px;
         }
 
-        /* =========================
-           GENERAL
-        ========================= */
-
-        section {
-            padding: 75px 20px;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: auto;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 45px;
-        }
-
-        .section-title h2 {
-            color: #0b6b4f;
-            font-size: 36px;
-            margin-bottom: 10px;
-        }
-
-        .section-title p {
-            color: #666;
-        }
-
-        /* =========================
-           CONTACT GRID
-        ========================= */
-
         .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1.4fr;
             gap: 40px;
             align-items: start;
         }
-
-        /* =========================
-           CONTACT INFORMATION
-        ========================= */
 
         .contact-info {
             background: #f7faf9;
@@ -150,9 +107,7 @@
             font-style: italic;
         }
 
-        /* =========================
-           FORM
-        ========================= */
+        /* FORM */
 
         .contact-form {
             background: white;
@@ -234,10 +189,6 @@
             background: #084d3a;
         }
 
-        /* =========================
-           SUCCESS MESSAGE
-        ========================= */
-
         .form-message {
             display: none;
             margin-top: 20px;
@@ -248,9 +199,7 @@
             text-align: center;
         }
 
-        /* =========================
-           MAP
-        ========================= */
+        /* MAP */
 
         .map-section {
             background: #f7faf9;
@@ -260,15 +209,21 @@
             max-width: 1000px;
             margin: auto;
             min-height: 300px;
+
             background:
-                linear-gradient(rgba(11,107,79,0.85), rgba(11,107,79,0.85)),
+                linear-gradient(
+                    rgba(11,107,79,0.85),
+                    rgba(11,107,79,0.85)
+                ),
                 url("https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=1400&q=80")
                 center/cover no-repeat;
 
             border-radius: 12px;
+
             display: flex;
             align-items: center;
             justify-content: center;
+
             text-align: center;
             color: white;
             padding: 30px;
@@ -279,9 +234,7 @@
             margin-bottom: 10px;
         }
 
-        /* =========================
-           SOCIAL
-        ========================= */
+        /* SOCIAL */
 
         .social-section {
             text-align: center;
@@ -308,9 +261,7 @@
             background: #084d3a;
         }
 
-        /* =========================
-           CTA
-        ========================= */
+        /* CTA */
 
         .cta-section {
             background: #0b6b4f;
@@ -352,37 +303,14 @@
             color: #0b6b4f;
         }
 
-        /* =========================
-           WHATSAPP
-        ========================= */
-
-        .whatsapp {
-            position: fixed;
-            right: 20px;
-            bottom: 20px;
-            width: 55px;
-            height: 55px;
-            border-radius: 50%;
-            background: #25D366;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            font-size: 26px;
-            z-index: 2000;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.25);
-        }
-
-        /* =========================
-           MOBILE
-        ========================= */
+        /* MOBILE */
 
         @media (max-width: 900px) {
 
             .contact-grid {
                 grid-template-columns: 1fr;
             }
+
         }
 
         @media (max-width: 600px) {
@@ -403,14 +331,19 @@
             .contact-info {
                 padding: 25px 20px;
             }
+
         }
+
     </style>
+
 </head>
+
 
 <body>
 
+
 <!-- =========================
-     CENTRAL EDGF HEADER
+     CENTRAL HEADER
 ========================= -->
 
 <div id="header-placeholder"></div>
@@ -451,13 +384,16 @@
 
         </div>
 
+
         <div class="contact-grid">
+
 
             <!-- CONTACT INFORMATION -->
 
             <div class="contact-info">
 
                 <h3>Contact Information</h3>
+
 
                 <div class="contact-item">
 
@@ -468,9 +404,11 @@
                         <h4>Address</h4>
 
                         <p>
+
                             <span class="placeholder">
                                 EDGF official address to be provided
                             </span>
+
                         </p>
 
                     </div>
@@ -487,9 +425,11 @@
                         <h4>Email</h4>
 
                         <p>
+
                             <span class="placeholder">
                                 EDGF official email to be provided
                             </span>
+
                         </p>
 
                     </div>
@@ -506,9 +446,11 @@
                         <h4>Telephone</h4>
 
                         <p>
+
                             <span class="placeholder">
                                 EDGF official telephone number to be provided
                             </span>
+
                         </p>
 
                     </div>
@@ -525,9 +467,11 @@
                         <h4>WhatsApp</h4>
 
                         <p>
+
                             <span class="placeholder">
                                 EDGF official WhatsApp number to be provided
                             </span>
+
                         </p>
 
                     </div>
@@ -544,10 +488,13 @@
                         <h4>Office Hours</h4>
 
                         <p>
+
                             Monday – Friday<br>
+
                             <span class="placeholder">
                                 Official office hours to be provided
                             </span>
+
                         </p>
 
                     </div>
@@ -567,17 +514,24 @@
                     Complete the form below and we will get back to you.
                 </p>
 
+
                 <form
+                    id="contactForm"
                     action="#"
                     method="POST"
-                    onsubmit="submitForm(event)">
+                >
+
 
                     <div class="form-row">
+
 
                         <div class="form-group">
 
                             <label for="name">
-                                Full Name <span class="required">*</span>
+
+                                Full Name
+                                <span class="required">*</span>
+
                             </label>
 
                             <input
@@ -585,7 +539,8 @@
                                 id="name"
                                 name="name"
                                 placeholder="Enter your full name"
-                                required>
+                                required
+                            >
 
                         </div>
 
@@ -593,7 +548,10 @@
                         <div class="form-group">
 
                             <label for="email">
-                                Email Address <span class="required">*</span>
+
+                                Email Address
+                                <span class="required">*</span>
+
                             </label>
 
                             <input
@@ -601,14 +559,17 @@
                                 id="email"
                                 name="email"
                                 placeholder="Enter your email"
-                                required>
+                                required
+                            >
 
                         </div>
+
 
                     </div>
 
 
                     <div class="form-row">
+
 
                         <div class="form-group">
 
@@ -620,7 +581,8 @@
                                 type="tel"
                                 id="phone"
                                 name="phone"
-                                placeholder="Enter your phone number">
+                                placeholder="Enter your phone number"
+                            >
 
                         </div>
 
@@ -633,7 +595,8 @@
 
                             <select
                                 id="subject"
-                                name="subject">
+                                name="subject"
+                            >
 
                                 <option value="">
                                     Select a subject
@@ -667,39 +630,49 @@
 
                         </div>
 
+
                     </div>
 
 
                     <div class="form-group">
 
                         <label for="message">
-                            Message <span class="required">*</span>
+
+                            Message
+                            <span class="required">*</span>
+
                         </label>
 
                         <textarea
                             id="message"
                             name="message"
                             placeholder="Write your message here..."
-                            required></textarea>
+                            required
+                        ></textarea>
 
                     </div>
 
 
                     <button
                         type="submit"
-                        class="submit-btn">
+                        class="submit-btn"
+                    >
+
                         Send Message
+
                     </button>
 
 
                     <div
                         class="form-message"
-                        id="formMessage">
+                        id="formMessage"
+                    >
 
                         Thank you for contacting EDGF.
                         Your message has been received.
 
                     </div>
+
 
                 </form>
 
@@ -729,6 +702,7 @@
             </p>
 
         </div>
+
 
         <div class="map-placeholder">
 
@@ -767,6 +741,7 @@
             </p>
 
         </div>
+
 
         <div class="social-links">
 
@@ -808,13 +783,21 @@
             can contribute to sustainable development.
         </p>
 
+
         <div class="cta-buttons">
 
-            <a href="donations.html" class="cta-donate">
+            <a
+                href="donations.html"
+                class="cta-donate"
+            >
                 Donate
             </a>
 
-            <a href="contact.html" class="cta-contact">
+
+            <a
+                href="contact.html"
+                class="cta-contact"
+            >
                 Contact Us
             </a>
 
@@ -826,7 +809,7 @@
 
 
 <!-- =========================
-     CENTRAL EDGF FOOTER
+     CENTRAL FOOTER
 ========================= -->
 
 <div id="footer-placeholder"></div>
@@ -840,7 +823,8 @@
     class="whatsapp"
     href="https://wa.me/"
     target="_blank"
-    aria-label="Contact EDGF on WhatsApp">
+    aria-label="Contact EDGF on WhatsApp"
+>
     ☎
 </a>
 
@@ -851,20 +835,39 @@
 
 <script src="script.js"></script>
 
+
+<!-- CONTACT FORM SCRIPT -->
+
 <script>
 
-function submitForm(event) {
+document.addEventListener("DOMContentLoaded", function () {
 
-    event.preventDefault();
+    const form =
+        document.getElementById("contactForm");
 
-    const message = document.getElementById("formMessage");
+    const message =
+        document.getElementById("formMessage");
 
-    message.style.display = "block";
 
-    event.target.reset();
-}
+    if (form) {
+
+        form.addEventListener("submit", function (event) {
+
+            event.preventDefault();
+
+            message.style.display = "block";
+
+            form.reset();
+
+        });
+
+    }
+
+});
 
 </script>
 
+
 </body>
+
 </html>
