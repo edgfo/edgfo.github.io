@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Donations | EDGFO</title>
+
+    <meta name="description" content="Support Enterprise Development and Governance Facility through donations and partnerships.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.7;
+            color: #222;
+            background: #fff;
+        }
+
+        header {
+            background: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 15px 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: #0b6b4f;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .brand {
+            font-size: 20px;
+            font-weight: bold;
+            color: #0b6b4f;
+        }
+
+        .brand span {
+            display: block;
+            font-size: 11px;
+            color: #555;
+            font-weight: normal;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #222;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #0b6b4f;
+        }
+
+        .cta {
+            padding: 10px 16px;
+            border-radius: 5px;
+            color: white !important;
+        }
+
+        .donate {
+            background: #d69e2e;
+        }
+
+        .contact {
+            background: #0b6b4f;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+            border: none;
+            background: transparent;
+        }
+
+        /* HERO */
+
+        .page-hero {
+            background:
+                linear-gradient(rgba(0,60,45,0.80), rgba(0,60,45,0.80)),
+                url("https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?auto=format&fit=crop&w=1600&q=80")
+                center/cover no-repeat;
+
+            color: white;
+            text-align: center;
+            padding: 105px 20px;
+        }
+
+        .page-hero h1 {
+            font-size: clamp(40px, 6vw, 65px);
+            margin-bottom: 15px;
+        }
+
+        .page-hero p {
+            max-width: 800px;
+            margin: auto;
+            font-size: 19px;
+        }
+
+        /* GENERAL */
+
+        section {
+            padding: 75px 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            color: #0b6b4f;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #666;
+        }
+
+        /* INTRO */
+
+        .intro {
+            text-align: center;
+        }
+
+        .intro-text {
+            max-width: 850px;
+            margin: auto;
+            font-size: 18px;
+        }
+
+        /* DONATION OPTIONS */
+
+        .donation-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .donation-card {
+            background: #f7faf9;
+            padding: 35px 28px;
+            border-radius: 12px;
+            text-align: center;
+            border-top: 5px solid #0b6b4f;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.06);
+        }
+
+        .donation-icon {
+            width: 65px;
+            height: 65px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            background: #0b6b4f;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+        }
+
+        .donation-card h3 {
+            color: #0b6b4f;
+            font-size: 23px;
+            margin-bottom: 12px;
+        }
+
+        .donation-card p {
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .donate-now {
+            display: inline-block;
+            background: #d69e2e;
+            color: white;
+            text-decoration: none;
+            padding: 11px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        /* BANK DETAILS */
+
+        .details-section {
+            background: #f7faf9;
+        }
+
+        .details-box {
+            max-width: 850px;
+            margin: auto;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+        }
+
+        .details-box h3 {
+            color: #0b6b4f;
+            font-size: 27px;
+            margin-bottom: 20px;
+        }
+
+        .bank-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 14px 0;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .bank-row strong {
+            color: #0b6b4f;
+        }
+
+        .placeholder {
+            color: #888;
+            font-style: italic;
+        }
+
+        /* WHY DONATE */
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .why-card {
+            padding: 28px;
+            background: #fff;
+            border: 1px solid #e5e5e5;
+            border-radius: 10px;
+        }
+
+        .why-card h3 {
+            color: #0b6b4f;
+            margin-bottom: 10px;
+        }
+
+        /* TRANSPARENCY */
+
+        .transparency {
+            background: #f7faf9;
+        }
+
+        .transparency-box {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+            padding: 35px;
+            background: white;
+            border-radius: 12px;
+        }
+
+        .transparency-box h3 {
+            color: #0b6b4f;
+            margin-bottom: 15px;
+        }
+
+        /* FAQ */
+
+        .faq {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .faq-item {
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            text-align: left;
+            padding: 18px 20px;
+            border: none;
+            background: #f7faf9;
+            color: #0b6b4f;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 18px 20px;
+            background: white;
+            color: #555;
+        }
+
+        .faq-answer.show {
+            display: block;
+        }
+
+        /* MAIN CTA */
+
+        .cta-section {
+            background: #0b6b4f;
+            color: white;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .cta-section p {
+            max-width: 750px;
+            margin: 0 auto 25px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .cta-buttons a {
+            text-decoration: none;
+            padding: 13px 25px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .cta-donate {
+            background: #d69e2e;
+            color: white;
+        }
+
+        .cta-contact {
+            background: white;
+            color: #0b6b4f;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #102a24;
+            color: white;
+            padding: 50px 20px 20px;
+        }
+
+        .footer-grid {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+        }
+
+        footer h3 {
+            margin-bottom: 15px;
+        }
+
+        footer a {
+            color: #ddd;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            margin-top: 35px;
+            padding-top: 20px;
+            color: #ccc;
+            font-size: 14px;
+        }
+
+        /* WHATSAPP */
+
+        .whatsapp {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: #25D366;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 26px;
+            z-index: 2000;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 900px) {
+
+            .menu-toggle {
+                display: block;
+            }
+
+            nav {
+                display: none;
+                position: absolute;
+                top: 85px;
+                left: 0;
+                width: 100%;
+                background: white;
+                padding: 20px;
+                flex-direction: column;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            }
+
+            nav.active {
+                display: flex;
+            }
+
+            nav a {
+                width: 100%;
+                text-align: center;
+                padding: 10px;
+            }
+
+            .donation-grid,
+            .why-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .donation-grid,
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .page-hero {
+                padding: 80px 20px;
+            }
+
+            .page-hero h1 {
+                font-size: 40px;
+            }
+
+            .details-box {
+                padding: 25px 20px;
+            }
+
+            .bank-row {
+                flex-direction: column;
+                gap: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="header-container">
+
+        <div class="logo-area">
+
+            <div class="logo">ED</div>
+
+            <div class="brand">
+                EDGFO
+                <span>Enterprise Development & Governance Facility</span>
+            </div>
+
+        </div>
+
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+        <nav id="mainNav">
+
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="programmes.html">Programmes/Projects</a>
+            <a href="resources.html">Resources</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="donations.html">Donations</a>
+
+            <a href="donations.html" class="cta donate">Donate</a>
+            <a href="contact.html" class="cta contact">Contact Us</a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="page-hero">
+
+    <h1>Support EDGFO</h1>
+
+    <p>
+        Your contribution can help strengthen enterprises, improve governance,
+        develop skills and create sustainable opportunities.
+    </p>
+
+</section>
+
+
+<!-- INTRODUCTION -->
+
+<section class="intro">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Make a Difference</h2>
+
+            <p>Every contribution can support meaningful development.</p>
+
+        </div>
+
+        <div class="intro-text">
+
+            <p>
+                EDGFO seeks to work with individuals, organizations,
+                businesses, development partners and communities to implement
+                programmes that create sustainable impact.
+            </p>
+
+            <br>
+
+            <p>
+                Your financial contribution can help us support enterprise
+                development, governance strengthening, skills development,
+                digital innovation, research and community initiatives.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- DONATION OPTIONS -->
+
+<section>
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Ways to Support</h2>
+
+            <p>
+                Choose the contribution method that works best for you.
+            </p>
+
+        </div>
+
+        <div class="donation-grid">
+
+            <div class="donation-card">
+
+                <div class="donation-icon">🏦</div>
+
+                <h3>Bank Transfer</h3>
+
+                <p>
+                    Support EDGFO through a direct bank transfer using our
+                    official account details.
+                </p>
+
+                <a href="#bank-details" class="donate-now">
+                    View Details
+                </a>
+
+            </div>
+
+
+            <div class="donation-card">
+
+                <div class="donation-icon">📱</div>
+
+                <h3>Mobile Money</h3>
+
+                <p>
+                    Mobile money donation options can provide a convenient
+                    way to support EDGFO.
+                </p>
+
+                <a href="#mobile-money" class="donate-now">
+                    View Details
+                </a>
+
+            </div>
+
+
+            <div class="donation-card">
+
+                <div class="donation-icon">💳</div>
+
+                <h3>Online Donation</h3>
+
+                <p>
+                    An online donation facility can make it easier for
+                    supporters to contribute from anywhere.
+                </p>
+
+                <a href="#online-donation" class="donate-now">
+                    Donate Online
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- BANK DETAILS -->
+
+<section class="details-section" id="bank-details">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Bank Transfer</h2>
+
+            <p>
+                Official EDGFO banking information.
+            </p>
+
+        </div>
+
+        <div class="details-box">
+
+            <h3>Bank Account Details</h3>
+
+            <div class="bank-row">
+                <strong>Account Name</strong>
+                <span class="placeholder">
+                    TO BE PROVIDED
+                </span>
+            </div>
+
+            <div class="bank-row">
+                <strong>Bank Name</strong>
+                <span class="placeholder">
+                    TO BE PROVIDED
+                </span>
+            </div>
+
+            <div class="bank-row">
+                <strong>Account Number</strong>
+                <span class="placeholder">
+                    TO BE PROVIDED
+                </span>
+            </div>
+
+            <div class="bank-row">
+                <strong>Branch</strong>
+                <span class="placeholder">
+                    TO BE PROVIDED
+                </span>
+            </div>
+
+            <div class="bank-row">
+                <strong>SWIFT/BIC</strong>
+                <span class="placeholder">
+                    TO BE PROVIDED
+                </span>
+            </div>
+
+            <div class="resource-note" style="margin-top:25px;">
+
+                <strong>Important:</strong>
+                Please use only the official EDGFO banking information
+                published on this website when making a donation.
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- MOBILE MONEY -->
+
+<section id="mobile-money">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Mobile Money</h2>
+
+            <p>
+                Convenient options for local supporters.
+            </p>
+
+        </div>
+
+        <div class="details-box">
+
+            <h3>Mobile Money Details</h3>
+
+            <div class="bank-row">
+                <strong>Network</strong>
+                <span class="placeholder">
+                    TO BE PROVIDED
+                </span>
+            </div>
+
+            <div class="bank-row">
+                <strong>Account/Phone Number</strong>
+                <span class="placeholder">
+                    TO BE PROVIDED
+                </span>
+            </div>
+
+            <div class="bank-row">
+                <strong>Account Name</strong>
+                <span class="placeholder">
+                    TO BE PROVIDED
+                </span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ONLINE DONATION -->
+
+<section class="details-section" id="online-donation">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Online Donation</h2>
+
+            <p>
+                Support EDGFO securely online.
+            </p>
+
+        </div>
+
+        <div class="details-box" style="text-align:center;">
+
+            <h3>Donate Online</h3>
+
+            <p>
+                EDGFO's online donation facility will be connected here
+                once the preferred payment platform has been configured.
+            </p>
+
+            <br>
+
+            <a
+                href="contact.html"
+                class="donate-now">
+                Contact Us About Donating
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- WHY DONATE -->
+
+<section>
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>What Your Support Can Help Us Do</h2>
+
+            <p>
+                Contributions can help advance our development objectives.
+            </p>
+
+        </div>
+
+        <div class="why-grid">
+
+            <div class="why-card">
+
+                <h3>Enterprise Development</h3>
+
+                <p>
+                    Support entrepreneurship, enterprise skills, business
+                    development and innovation.
+                </p>
+
+            </div>
+
+            <div class="why-card">
+
+                <h3>Good Governance</h3>
+
+                <p>
+                    Support initiatives that promote transparency,
+                    accountability, participation and institutional
+                    strengthening.
+                </p>
+
+            </div>
+
+            <div class="why-card">
+
+                <h3>Skills Development</h3>
+
+                <p>
+                    Help provide training and capacity-building opportunities
+                    for young people and other beneficiaries.
+                </p>
+
+            </div>
+
+            <div class="why-card">
+
+                <h3>Community Initiatives</h3>
+
+                <p>
+                    Support community-led solutions and sustainable
+                    development initiatives.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- TRANSPARENCY -->
+
+<section class="transparency">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Transparency & Accountability</h2>
+
+            <p>
+                We believe supporters deserve to know how resources are used.
+            </p>
+
+        </div>
+
+        <div class="transparency-box">
+
+            <h3>Responsible Use of Resources</h3>
+
+            <p>
+                EDGFO is committed to responsible stewardship of funds
+                entrusted to the organization. Information about supported
+                programmes, activities and relevant financial or impact
+                reports can be made available to stakeholders in accordance
+                with applicable policies and requirements.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FAQ -->
+
+<section>
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Frequently Asked Questions</h2>
+
+            <p>
+                Common questions about supporting EDGFO.
+            </p>
+
+        </div>
+
+        <div class="faq">
+
+            <div class="faq-item">
+
+                <button
+                    class="faq-question"
+                    onclick="toggleFAQ(this)">
+                    How can I donate to EDGFO?
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        You will be able to donate through the official bank,
+                        mobile money or online payment options published on
+                        this page.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <button
+                    class="faq-question"
+                    onclick="toggleFAQ(this)">
+                    Can organizations make donations?
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        Yes. Organizations and institutions can support EDGFO
+                        through financial contributions, partnerships,
+                        sponsorships or other forms of support.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <button
+                    class="faq-question"
+                    onclick="toggleFAQ(this)">
+                    Can I support a specific project?
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        Where project-specific funding opportunities are
+                        available, supporters can contact EDGFO to discuss
+                        the programme or project they wish to support.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <button
+                    class="faq-question"
+                    onclick="toggleFAQ(this)">
+                    How will my contribution be acknowledged?
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        EDGFO can provide appropriate acknowledgement or
+                        confirmation of contributions in accordance with its
+                        policies and donor requirements.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta-section">
+
+    <div class="container">
+
+        <h2>Ready to Support EDGFO?</h2>
+
+        <p>
+            Every contribution can help us create opportunities, strengthen
+            institutions and support sustainable development.
+        </p>
+
+        <div class="cta-buttons">
+
+            <a href="#bank-details" class="cta-donate">
+                Donate
+            </a>
+
+            <a href="contact.html" class="cta-contact">
+                Contact Us
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-grid">
+
+        <div>
+
+            <h3>EDGFO</h3>
+
+            <p>
+                Enterprise Development and Governance Facility.
+            </p>
+
+            <p>
+                Building enterprises, strengthening governance and creating
+                opportunities for sustainable development.
+            </p>
+
+        </div>
+
+        <div>
+
+            <h3>Quick Links</h3>
+
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="programmes.html">Programmes/Projects</a>
+            <a href="resources.html">Resources</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="donations.html">Donations</a>
+
+        </div>
+
+        <div>
+
+            <h3>Get Involved</h3>
+
+            <a href="donations.html">Donate</a>
+            <a href="contact.html">Contact Us</a>
+
+        </div>
+
+    </div>
+
+    <div class="copyright">
+
+        © 2026 Enterprise Development and Governance Facility (EDGFO).
+        All rights reserved.
+
+    </div>
+
+</footer>
+
+
+<!-- WHATSAPP -->
+
+<a
+    class="whatsapp"
+    href="https://wa.me/"
+    target="_blank"
+    aria-label="Contact EDGFO on WhatsApp">
+    ☎
+</a>
+
+
+<script>
+
+function toggleMenu() {
+
+    const nav = document.getElementById("mainNav");
+
+    nav.classList.toggle("active");
+
+}
+
+
+function toggleFAQ(button) {
+
+    const answer = button.nextElementSibling;
+
+    answer.classList.toggle("show");
+
+}
+
+</script>
+
+</body>
+</html>
