@@ -6,7 +6,7 @@
 
     <title>Programmes & Projects | EDGF</title>
 
-    <meta name="description" content="Explore the programmes and projects of Enterprise Development & Governance Facility (EDGF), focused on enterprise development, governance, digital innovation, youth empowerment and community development.">
+    <meta name="description" content="Explore the programmes and projects of Enterprise Development & Governance Facility (EDGF), promoting enterprise development, good governance, innovation and sustainable community development.">
 
     <link rel="stylesheet" href="style.css">
 
@@ -28,12 +28,14 @@
             background: #fff;
         }
 
-        /* PAGE HERO */
+        /* =========================
+           PAGE HERO
+        ========================= */
 
         .page-hero {
             background:
                 linear-gradient(rgba(0,60,45,0.78), rgba(0,60,45,0.78)),
-                url("https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1600&q=80")
+                url("https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1600&q=80")
                 center/cover no-repeat;
 
             color: white;
@@ -52,7 +54,9 @@
             margin: auto;
         }
 
-        /* GENERAL */
+        /* =========================
+           GENERAL
+        ========================= */
 
         section {
             padding: 75px 20px;
@@ -76,22 +80,13 @@
 
         .section-title p {
             color: #666;
-        }
-
-        /* INTRODUCTION */
-
-        .intro {
-            background: #fff;
-        }
-
-        .intro-content {
-            max-width: 900px;
+            max-width: 800px;
             margin: auto;
-            text-align: center;
-            font-size: 18px;
         }
 
-        /* PROGRAMMES */
+        /* =========================
+           PROGRAMMES
+        ========================= */
 
         .programmes-grid {
             display: grid;
@@ -115,14 +110,16 @@
         .programme-card h3 {
             color: #0b6b4f;
             font-size: 23px;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
 
         .programme-card p {
             color: #444;
         }
 
-        /* FEATURED PROJECTS */
+        /* =========================
+           PROJECTS
+        ========================= */
 
         .projects {
             background: #f7faf9;
@@ -136,41 +133,57 @@
 
         .project-card {
             background: white;
-            padding: 32px;
+            padding: 35px;
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.06);
         }
 
         .project-card h3 {
             color: #0b6b4f;
-            margin-bottom: 12px;
             font-size: 24px;
-        }
-
-        .project-card strong {
-            color: #d69e2e;
-        }
-
-        /* HOW WE WORK */
-
-        .approach-list {
-            max-width: 900px;
-            margin: auto;
-        }
-
-        .approach-item {
-            padding: 20px;
             margin-bottom: 15px;
+        }
+
+        .project-card p {
+            margin-bottom: 12px;
+        }
+
+        .project-status {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 6px 12px;
+            border-radius: 20px;
+            background: #d69e2e;
+            color: white;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        /* =========================
+           APPROACH
+        ========================= */
+
+        .approach-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .approach-card {
+            padding: 25px;
             background: #f7faf9;
-            border-left: 5px solid #d69e2e;
-            border-radius: 5px;
+            border-radius: 8px;
+            text-align: center;
         }
 
-        .approach-item strong {
+        .approach-card h3 {
             color: #0b6b4f;
+            margin-bottom: 10px;
         }
 
-        /* CTA */
+        /* =========================
+           CTA
+        ========================= */
 
         .cta-section {
             background: #0b6b4f;
@@ -212,7 +225,9 @@
             color: #0b6b4f;
         }
 
-        /* WHATSAPP */
+        /* =========================
+           WHATSAPP
+        ========================= */
 
         .whatsapp {
             position: fixed;
@@ -232,7 +247,9 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.25);
         }
 
-        /* MOBILE */
+        /* =========================
+           MOBILE
+        ========================= */
 
         @media (max-width: 850px) {
 
@@ -241,66 +258,54 @@
                 grid-template-columns: 1fr;
             }
 
+            .approach-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
             .page-hero {
                 padding: 80px 20px;
             }
+        }
+
+        @media (max-width: 550px) {
+
+            .approach-grid {
+                grid-template-columns: 1fr;
+            }
+
         }
     </style>
 </head>
 
 <body>
 
-<!-- CENTRAL EDGF HEADER -->
+<!-- =========================
+     CENTRAL EDGF HEADER
+========================= -->
 
 <div id="header-placeholder"></div>
 
 
-<!-- PAGE HERO -->
+<!-- =========================
+     PAGE HERO
+========================= -->
 
 <section class="page-hero">
 
     <h1>Programmes & Projects</h1>
 
     <p>
-        Our programmes and projects are designed to strengthen enterprises,
-        improve governance, promote innovation and create sustainable
+        Our programmes and projects focus on strengthening enterprises,
+        improving governance, promoting innovation and creating sustainable
         opportunities for individuals and communities.
     </p>
 
 </section>
 
 
-<!-- INTRODUCTION -->
-
-<section class="intro">
-
-    <div class="container">
-
-        <div class="section-title">
-
-            <h2>What We Do</h2>
-
-            <p>Turning ideas into practical development initiatives.</p>
-
-        </div>
-
-        <div class="intro-content">
-
-            <p>
-                EDGF develops and supports programmes that respond to
-                enterprise, governance, community and development challenges.
-                Our approach combines capacity building, innovation,
-                partnerships and practical action to create lasting impact.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- OUR PROGRAMMES -->
+<!-- =========================
+     OUR PROGRAMMES
+========================= -->
 
 <section>
 
@@ -311,7 +316,8 @@
             <h2>Our Programmes</h2>
 
             <p>
-                Key areas through which EDGF delivers its development work.
+                EDGF implements and supports initiatives designed to respond
+                to development needs and create practical opportunities.
             </p>
 
         </div>
@@ -323,13 +329,12 @@
                 <h3>Enterprise Development</h3>
 
                 <p>
-                    Supporting entrepreneurs, start-ups and small businesses
-                    with knowledge, skills, mentorship and opportunities for
-                    sustainable growth.
+                    Supporting entrepreneurs, small businesses and emerging
+                    enterprises with knowledge, skills, mentoring and
+                    opportunities for sustainable growth.
                 </p>
 
             </div>
-
 
             <div class="programme-card">
 
@@ -337,12 +342,10 @@
 
                 <p>
                     Promoting accountability, transparency, participation,
-                    responsible leadership and effective institutional
-                    practices.
+                    ethical leadership and effective institutional practices.
                 </p>
 
             </div>
-
 
             <div class="programme-card">
 
@@ -350,12 +353,11 @@
 
                 <p>
                     Supporting community-led initiatives that improve
-                    livelihoods, inclusion, resilience and sustainable
-                    development.
+                    livelihoods, strengthen resilience and promote inclusive
+                    and sustainable development.
                 </p>
 
             </div>
-
 
             <div class="programme-card">
 
@@ -363,34 +365,32 @@
 
                 <p>
                     Promoting digital skills, technology, innovation and
-                    digital solutions that expand access to information
-                    and economic opportunities.
+                    digital inclusion as tools for education, enterprise and
+                    community development.
                 </p>
 
             </div>
-
 
             <div class="programme-card">
 
                 <h3>Youth & Skills Development</h3>
 
                 <p>
-                    Equipping young people with practical skills,
-                    entrepreneurship knowledge and opportunities for
-                    education, employment and enterprise.
+                    Equipping young people with practical skills, knowledge
+                    and opportunities for employment, entrepreneurship and
+                    leadership.
                 </p>
 
             </div>
 
-
             <div class="programme-card">
 
-                <h3>Partnerships & Capacity Building</h3>
+                <h3>Partnership & Collaboration</h3>
 
                 <p>
-                    Building partnerships and strengthening the capacity
-                    of institutions, organizations and community actors
-                    to achieve sustainable development objectives.
+                    Building partnerships with public institutions, private
+                    sector actors, civil society, communities and development
+                    partners to achieve shared development objectives.
                 </p>
 
             </div>
@@ -402,7 +402,9 @@
 </section>
 
 
-<!-- PROJECTS -->
+<!-- =========================
+     PROJECTS
+========================= -->
 
 <section class="projects">
 
@@ -413,7 +415,8 @@
             <h2>Featured Projects</h2>
 
             <p>
-                Practical initiatives through which EDGF creates impact.
+                Selected initiatives through which EDGF seeks to translate
+                its programmes into practical development outcomes.
             </p>
 
         </div>
@@ -422,81 +425,69 @@
 
             <div class="project-card">
 
-                <h3>Enterprise Empowerment Project</h3>
+                <h3>Enterprise Growth & Capacity Building</h3>
 
                 <p>
-                    A practical initiative aimed at helping entrepreneurs
-                    develop business knowledge, improve management practices
-                    and identify opportunities for sustainable enterprise
-                    growth.
+                    A programme aimed at strengthening the capacity of
+                    entrepreneurs and small enterprises through training,
+                    mentoring, business development support and access to
+                    relevant opportunities.
                 </p>
 
-                <br>
-
-                <p>
-                    <strong>Focus:</strong> Entrepreneurship, business skills,
-                    mentoring and access to opportunities.
-                </p>
+                <span class="project-status">
+                    Developing
+                </span>
 
             </div>
 
 
             <div class="project-card">
 
-                <h3>Community Governance Initiative</h3>
+                <h3>Community Digital Inclusion</h3>
 
                 <p>
-                    Supporting communities and institutions to strengthen
-                    participation, accountability, transparency and
-                    responsible decision-making.
+                    An initiative promoting access to digital tools, digital
+                    literacy and technology-based opportunities for
+                    underserved communities.
                 </p>
 
-                <br>
-
-                <p>
-                    <strong>Focus:</strong> Good governance, participation,
-                    accountability and institutional strengthening.
-                </p>
+                <span class="project-status">
+                    Developing
+                </span>
 
             </div>
 
 
             <div class="project-card">
 
-                <h3>Digital Skills & Innovation Project</h3>
+                <h3>Governance & Institutional Strengthening</h3>
 
                 <p>
-                    Promoting digital literacy and practical technology
-                    skills among young people, entrepreneurs and community
-                    members.
+                    Supporting institutions and community organizations to
+                    improve governance systems, accountability, transparency,
+                    leadership and organizational effectiveness.
                 </p>
 
-                <br>
-
-                <p>
-                    <strong>Focus:</strong> Digital literacy, innovation,
-                    technology and economic opportunity.
-                </p>
+                <span class="project-status">
+                    Developing
+                </span>
 
             </div>
 
 
             <div class="project-card">
 
-                <h3>Youth Opportunity Initiative</h3>
+                <h3>Youth Innovation & Skills Initiative</h3>
 
                 <p>
-                    Supporting young people with skills, mentorship and
-                    development opportunities that can improve their
-                    participation in education, employment and enterprise.
+                    Creating opportunities for young people to acquire
+                    practical skills, explore innovation and develop
+                    entrepreneurial solutions to community challenges.
                 </p>
 
-                <br>
-
-                <p>
-                    <strong>Focus:</strong> Youth empowerment, skills,
-                    entrepreneurship and employment.
-                </p>
+                <span class="project-status">
+                    Developing
+                </span>
 
             </div>
 
@@ -507,7 +498,9 @@
 </section>
 
 
-<!-- HOW WE WORK -->
+<!-- =========================
+     OUR APPROACH
+========================= -->
 
 <section>
 
@@ -515,58 +508,56 @@
 
         <div class="section-title">
 
-            <h2>How We Work</h2>
+            <h2>How We Implement Our Programmes</h2>
 
             <p>
-                Our programmes are guided by a practical and participatory
-                approach.
+                We use practical and collaborative approaches to ensure that
+                our programmes respond to real community and institutional
+                needs.
             </p>
 
         </div>
 
-        <div class="approach-list">
+        <div class="approach-grid">
 
-            <div class="approach-item">
+            <div class="approach-card">
 
-                <strong>Needs Assessment:</strong>
-                We identify development needs and priorities through
-                consultation with relevant stakeholders.
+                <h3>Capacity Building</h3>
 
-            </div>
-
-
-            <div class="approach-item">
-
-                <strong>Capacity Building:</strong>
-                We provide knowledge, skills and practical support that
-                enable individuals and institutions to achieve their goals.
+                <p>
+                    Training, mentoring and knowledge sharing.
+                </p>
 
             </div>
 
+            <div class="approach-card">
 
-            <div class="approach-item">
+                <h3>Partnerships</h3>
 
-                <strong>Partnership:</strong>
-                We work with communities, institutions, businesses,
-                government and development partners.
-
-            </div>
-
-
-            <div class="approach-item">
-
-                <strong>Innovation:</strong>
-                We encourage practical and creative solutions to development
-                challenges.
+                <p>
+                    Working with stakeholders to maximize impact.
+                </p>
 
             </div>
 
+            <div class="approach-card">
 
-            <div class="approach-item">
+                <h3>Innovation</h3>
 
-                <strong>Monitoring & Learning:</strong>
-                We promote evidence-based learning, accountability and
-                continuous improvement.
+                <p>
+                    Applying creative and practical solutions.
+                </p>
+
+            </div>
+
+            <div class="approach-card">
+
+                <h3>Community Participation</h3>
+
+                <p>
+                    Involving communities in identifying and addressing
+                    development priorities.
+                </p>
 
             </div>
 
@@ -577,18 +568,20 @@
 </section>
 
 
-<!-- CTA -->
+<!-- =========================
+     CALL TO ACTION
+========================= -->
 
 <section class="cta-section">
 
     <div class="container">
 
-        <h2>Partner With EDGF</h2>
+        <h2>Support Our Programmes</h2>
 
         <p>
-            You can support, participate in or partner with our programmes
-            and projects to help create sustainable opportunities and
-            stronger communities.
+            Your partnership, support and participation can help EDGF expand
+            opportunities, strengthen enterprises and contribute to
+            sustainable development.
         </p>
 
         <div class="cta-buttons">
@@ -608,12 +601,16 @@
 </section>
 
 
-<!-- CENTRAL EDGF FOOTER -->
+<!-- =========================
+     CENTRAL EDGF FOOTER
+========================= -->
 
 <div id="footer-placeholder"></div>
 
 
-<!-- WHATSAPP -->
+<!-- =========================
+     WHATSAPP
+========================= -->
 
 <a
     class="whatsapp"
@@ -625,7 +622,9 @@
 </a>
 
 
-<!-- CENTRAL SCRIPT -->
+<!-- =========================
+     CENTRAL SCRIPT
+========================= -->
 
 <script src="script.js"></script>
 
