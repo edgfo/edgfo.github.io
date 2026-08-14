@@ -1,235 +1,8 @@
 <header>
 
-    <style>
-
-        /* =========================
-           EDGF CENTRAL HEADER
-        ========================= */
-
-        header {
-            background: #ffffff;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-        }
-
-        .header-container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 12px 25px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        /* LOGO AREA */
-
-        .logo-area {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-        }
-
-        /* EDGF LOGO */
-
-        .logo {
-            width: 68px;
-            height: 68px;
-            border-radius: 50%;
-            background: #0b6b4f;
-            color: #ffffff;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            font-size: 25px;
-            font-weight: 800;
-            letter-spacing: 1px;
-
-            flex-shrink: 0;
-
-            box-shadow: 0 3px 8px rgba(0,0,0,0.15);
-        }
-
-        /* BRAND */
-
-        .brand {
-            font-size: 20px;
-            font-weight: bold;
-            color: #0b6b4f;
-            line-height: 1.2;
-        }
-
-        .brand span {
-            display: block;
-            font-size: 11px;
-            color: #555555;
-            font-weight: normal;
-            margin-top: 3px;
-        }
-
-        /* NAVIGATION */
-
-        nav {
-            display: flex;
-            align-items: center;
-            gap: 18px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #222222;
-            font-weight: 600;
-            font-size: 14px;
-            transition: color 0.3s ease;
-        }
-
-        nav a:hover {
-            color: #0b6b4f;
-        }
-
-        /* BUTTONS */
-
-        .cta {
-            padding: 10px 16px;
-            border-radius: 5px;
-            color: #ffffff !important;
-        }
-
-        .donate {
-            background: #d69e2e;
-        }
-
-        .contact {
-            background: #0b6b4f;
-        }
-
-        .donate:hover {
-            background: #b88620;
-        }
-
-        .contact:hover {
-            background: #084d3a;
-        }
-
-        /* MOBILE MENU BUTTON */
-
-        .menu-toggle {
-            display: none;
-            font-size: 28px;
-            cursor: pointer;
-            border: none;
-            background: transparent;
-            color: #0b6b4f;
-            padding: 5px;
-        }
-
-
-        /* =========================
-           TABLET / MOBILE
-        ========================= */
-
-        @media (max-width: 900px) {
-
-            .header-container {
-                padding: 10px 18px;
-            }
-
-            .menu-toggle {
-                display: block;
-            }
-
-            nav {
-                display: none;
-
-                position: absolute;
-                top: 92px;
-                left: 0;
-
-                width: 100%;
-
-                background: #ffffff;
-
-                padding: 20px;
-
-                flex-direction: column;
-
-                gap: 5px;
-
-                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            }
-
-            nav.active {
-                display: flex;
-            }
-
-            nav a {
-                width: 100%;
-                text-align: center;
-                padding: 10px;
-            }
-
-            .logo {
-                width: 62px;
-                height: 62px;
-                font-size: 23px;
-            }
-
-            .brand {
-                font-size: 18px;
-            }
-
-            .brand span {
-                font-size: 10px;
-            }
-
-        }
-
-
-        /* =========================
-           SMALL PHONES
-        ========================= */
-
-        @media (max-width: 600px) {
-
-            .header-container {
-                padding: 8px 14px;
-            }
-
-            .logo-area {
-                gap: 10px;
-            }
-
-            .logo {
-                width: 58px;
-                height: 58px;
-                font-size: 21px;
-            }
-
-            .brand {
-                font-size: 17px;
-            }
-
-            .brand span {
-                font-size: 9px;
-                max-width: 190px;
-            }
-
-            nav {
-                top: 78px;
-            }
-
-        }
-
-    </style>
-
-
     <div class="header-container">
 
-
-        <!-- EDGF LOGO AND BRAND -->
+        <!-- LOGO AND BRAND -->
 
         <div class="logo-area">
 
@@ -238,72 +11,52 @@
             </div>
 
             <div class="brand">
-
                 EDGF
-
                 <span>
                     Enterprise Development & Governance Facility
                 </span>
-
             </div>
 
         </div>
 
 
-        <!-- MOBILE MENU BUTTON -->
+        <!-- MOBILE MENU -->
 
         <button
             class="menu-toggle"
             type="button"
-            aria-label="Open navigation menu"
-        >
+            aria-label="Open navigation menu">
             ☰
         </button>
 
 
-        <!-- MAIN NAVIGATION -->
+        <!-- NAVIGATION -->
 
         <nav id="mainNav">
 
-            <a href="index.html">
-                Home
-            </a>
+            <a href="index.html">Home</a>
 
-            <a href="about.html">
-                About Us
-            </a>
+            <a href="about.html">About Us</a>
 
-            <a href="programmes.html">
-                Programmes
-            </a>
+            <a href="programmes.html">Programmes</a>
 
-            <a href="resources.html">
-                Resources
-            </a>
+            <a href="resources.html">Resources</a>
 
-            <a href="gallery.html">
-                Gallery
-            </a>
+            <a href="gallery.html">Gallery</a>
 
-            <a href="editors-note.html">
-                Editor's Note
-            </a>
+            <a href="editors-note.html">Editor's Note</a>
 
-            <a href="donations.html">
-                Donations
-            </a>
+            <a href="donations.html">Donations</a>
 
             <a
                 href="donations.html"
-                class="cta donate"
-            >
+                class="cta donate">
                 Donate
             </a>
 
             <a
                 href="contact.html"
-                class="cta contact"
-            >
+                class="cta contact">
                 Contact Us
             </a>
 
