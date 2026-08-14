@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -158,4 +157,727 @@
         .section-title h2 {
             color: #0b6b4f;
             font-size: 36px;
-            margin-bottom: 10px
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #666;
+        }
+
+        /* EDITOR */
+
+        .editor-section {
+            background: #fff;
+        }
+
+        .editor-grid {
+            display: grid;
+            grid-template-columns: 330px 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        .editor-profile {
+            background: #f7faf9;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            border-top: 5px solid #0b6b4f;
+            position: sticky;
+            top: 110px;
+        }
+
+        .editor-photo {
+            width: 190px;
+            height: 190px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            overflow: hidden;
+            background: #dfe9e5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #0b6b4f;
+            font-size: 60px;
+            font-weight: bold;
+        }
+
+        .editor-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .editor-profile h3 {
+            color: #0b6b4f;
+            font-size: 25px;
+            margin-bottom: 5px;
+        }
+
+        .editor-title {
+            color: #666;
+            font-size: 15px;
+        }
+
+        .editor-message {
+            background: white;
+        }
+
+        .editor-message h2 {
+            color: #0b6b4f;
+            font-size: 34px;
+            margin-bottom: 20px;
+        }
+
+        .editor-message p {
+            margin-bottom: 20px;
+            font-size: 17px;
+        }
+
+        .opening {
+            font-size: 21px !important;
+            color: #0b6b4f;
+            font-weight: 600;
+        }
+
+        .signature {
+            margin-top: 35px;
+            padding-top: 25px;
+            border-top: 1px solid #ddd;
+        }
+
+        .signature-name {
+            color: #0b6b4f;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        /* HIGHLIGHTS */
+
+        .highlights {
+            background: #f7faf9;
+        }
+
+        .highlight-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .highlight-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            border-left: 5px solid #d69e2e;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .highlight-card h3 {
+            color: #0b6b4f;
+            margin-bottom: 10px;
+        }
+
+        /* CURRENT MESSAGE */
+
+        .current-message {
+            max-width: 900px;
+            margin: auto;
+            padding: 40px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+            border-top: 5px solid #0b6b4f;
+        }
+
+        .current-message h3 {
+            color: #0b6b4f;
+            font-size: 27px;
+            margin-bottom: 15px;
+        }
+
+        .date {
+            color: #777;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        /* CTA */
+
+        .cta-section {
+            background: #0b6b4f;
+            color: white;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .cta-section p {
+            max-width: 750px;
+            margin: 0 auto 25px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .cta-buttons a {
+            text-decoration: none;
+            padding: 13px 25px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .cta-donate {
+            background: #d69e2e;
+            color: white;
+        }
+
+        .cta-contact {
+            background: white;
+            color: #0b6b4f;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #102a24;
+            color: white;
+            padding: 50px 20px 20px;
+        }
+
+        .footer-grid {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+        }
+
+        footer h3 {
+            margin-bottom: 15px;
+        }
+
+        footer a {
+            color: #ddd;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            margin-top: 35px;
+            padding-top: 20px;
+            color: #ccc;
+            font-size: 14px;
+        }
+
+        /* WHATSAPP */
+
+        .whatsapp {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: #25D366;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 26px;
+            z-index: 2000;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 900px) {
+
+            .menu-toggle {
+                display: block;
+            }
+
+            nav {
+                display: none;
+                position: absolute;
+                top: 85px;
+                left: 0;
+                width: 100%;
+                background: white;
+                padding: 20px;
+                flex-direction: column;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            }
+
+            nav.active {
+                display: flex;
+            }
+
+            nav a {
+                width: 100%;
+                text-align: center;
+                padding: 10px;
+            }
+
+            .editor-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .editor-profile {
+                position: static;
+                max-width: 450px;
+                margin: auto;
+            }
+
+            .highlight-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .highlight-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .page-hero {
+                padding: 80px 20px;
+            }
+
+            .page-hero h1 {
+                font-size: 40px;
+            }
+
+            .current-message {
+                padding: 25px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="header-container">
+
+        <div class="logo-area">
+
+            <div class="logo">ED</div>
+
+            <div class="brand">
+                EDGF
+                <span>Enterprise Development & Governance Facility</span>
+            </div>
+
+        </div>
+
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+        <!-- MAIN NAVIGATION -->
+
+        <nav id="mainNav">
+
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="programmes.html">Programmes/Projects</a>
+            <a href="resources.html">Resources</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="editors-note.html">Editor's Note</a>
+            <a href="donations.html">Donations</a>
+
+            <a href="donations.html" class="cta donate">Donate</a>
+            <a href="contact.html" class="cta contact">Contact Us</a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- PAGE HERO -->
+
+<section class="page-hero">
+
+    <h1>Editor's Note</h1>
+
+    <p>
+        Perspectives, reflections and messages from the leadership and
+        editorial team of EDGF.
+    </p>
+
+</section>
+
+
+<!-- EDITOR'S MESSAGE -->
+
+<section class="editor-section">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>A Message from the Editor</h2>
+
+            <p>
+                Sharing perspectives on enterprise development and governance.
+            </p>
+
+        </div>
+
+        <div class="editor-grid">
+
+            <!-- EDITOR PROFILE -->
+
+            <div class="editor-profile">
+
+                <div class="editor-photo">
+                    ED
+                </div>
+
+                <h3>Editor's Name</h3>
+
+                <p class="editor-title">
+                    Editor / Executive Director
+                </p>
+
+            </div>
+
+
+            <!-- MESSAGE -->
+
+            <div class="editor-message">
+
+                <h2>Welcome to EDGF</h2>
+
+                <p class="opening">
+                    Welcome to the Enterprise Development and Governance
+                    Facility's digital platform.
+                </p>
+
+                <p>
+                    EDGF is committed to contributing to a society where
+                    enterprises can thrive, institutions can operate with
+                    integrity and accountability, and communities can access
+                    opportunities that support sustainable development.
+                </p>
+
+                <p>
+                    Through this platform, we will share information about
+                    our programmes and projects, publications, activities,
+                    opportunities and perspectives on issues relevant to
+                    enterprise development and governance.
+                </p>
+
+                <p>
+                    We believe that meaningful development requires
+                    collaboration. Governments, businesses, civil society,
+                    communities, development partners, young people and
+                    individuals all have important roles to play.
+                </p>
+
+                <p>
+                    We therefore invite you to explore our work, engage with
+                    our ideas, share your perspectives and join us in
+                    building practical solutions to development challenges.
+                </p>
+
+                <div class="signature">
+
+                    <p class="signature-name">
+                        Editor's Name
+                    </p>
+
+                    <p>
+                        Editor / Executive Director<br>
+                        Enterprise Development and Governance Facility
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- KEY PERSPECTIVES -->
+
+<section class="highlights">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Our Current Perspectives</h2>
+
+            <p>
+                Issues that inform our thinking and engagement.
+            </p>
+
+        </div>
+
+        <div class="highlight-grid">
+
+            <div class="highlight-card">
+
+                <h3>Enterprise Development</h3>
+
+                <p>
+                    Strong and sustainable enterprises can contribute to
+                    employment, innovation, livelihoods and economic growth.
+                </p>
+
+            </div>
+
+            <div class="highlight-card">
+
+                <h3>Good Governance</h3>
+
+                <p>
+                    Transparent, accountable and participatory institutions
+                    are essential for sustainable development.
+                </p>
+
+            </div>
+
+            <div class="highlight-card">
+
+                <h3>Youth & Skills</h3>
+
+                <p>
+                    Investing in knowledge, skills and opportunities can help
+                    young people become active contributors to development.
+                </p>
+
+            </div>
+
+            <div class="highlight-card">
+
+                <h3>Digital Innovation</h3>
+
+                <p>
+                    Responsible technology and digital innovation can expand
+                    access to knowledge, services and economic opportunities.
+                </p>
+
+            </div>
+
+            <div class="highlight-card">
+
+                <h3>Partnership</h3>
+
+                <p>
+                    Collaboration among stakeholders can produce solutions
+                    that are more sustainable and inclusive.
+                </p>
+
+            </div>
+
+            <div class="highlight-card">
+
+                <h3>Community Voice</h3>
+
+                <p>
+                    Development initiatives are stronger when communities
+                    participate meaningfully in decisions that affect them.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CURRENT EDITORIAL -->
+
+<section>
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Editor's Current Note</h2>
+
+            <p>
+                The latest editorial message will be featured here.
+            </p>
+
+        </div>
+
+        <div class="current-message">
+
+            <h3>
+                Building a Culture of Enterprise and Responsible Governance
+            </h3>
+
+            <p class="date">
+                Date: To be updated
+            </p>
+
+            <p>
+                Sustainable development is not achieved through isolated
+                interventions. It requires an environment where individuals
+                can develop their capabilities, enterprises can grow,
+                institutions can perform effectively and communities can
+                participate in shaping their future.
+            </p>
+
+            <p>
+                At EDGF, our aim is to contribute to this environment by
+                bringing together enterprise development, governance,
+                capacity building, innovation, research and partnerships.
+            </p>
+
+            <p>
+                This section will regularly feature the Editor's reflections
+                on emerging issues, EDGF initiatives, development trends and
+                opportunities for collaboration.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta-section">
+
+    <div class="container">
+
+        <h2>Join the Conversation</h2>
+
+        <p>
+            Have an idea, perspective or opportunity that you would like to
+            share with EDGF? We welcome meaningful engagement.
+        </p>
+
+        <div class="cta-buttons">
+
+            <a href="donations.html" class="cta-donate">
+                Donate
+            </a>
+
+            <a href="contact.html" class="cta-contact">
+                Contact Us
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-grid">
+
+        <div>
+
+            <h3>EDGF</h3>
+
+            <p>
+                Enterprise Development & Governance Facility.
+            </p>
+
+            <p>
+                Building enterprises, strengthening governance and creating
+                opportunities for sustainable development.
+            </p>
+
+        </div>
+
+        <div>
+
+            <h3>Quick Links</h3>
+
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="programmes.html">Programmes/Projects</a>
+            <a href="resources.html">Resources</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="editors-note.html">Editor's Note</a>
+            <a href="donations.html">Donations</a>
+
+        </div>
+
+        <div>
+
+            <h3>Get Involved</h3>
+
+            <a href="donations.html">Donate</a>
+            <a href="contact.html">Contact Us</a>
+
+        </div>
+
+    </div>
+
+    <div class="copyright">
+
+        © 2026 Enterprise Development & Governance Facility (EDGF).
+        All rights reserved.
+
+    </div>
+
+</footer>
+
+
+<!-- WHATSAPP -->
+
+<a
+    class="whatsapp"
+    href="https://wa.me/"
+    target="_blank"
+    aria-label="Contact EDGF on WhatsApp">
+    ☎
+</a>
+
+
+<script>
+
+function toggleMenu() {
+
+    const nav = document.getElementById("mainNav");
+
+    nav.classList.toggle("active");
+
+}
+
+</script>
+
+</body>
+</html>
