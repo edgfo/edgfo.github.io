@@ -1,29 +1,51 @@
-/* =========================
-   LOAD CENTRAL HEADER
-========================= */
+document.addEventListener("DOMContentLoaded", function () {
 
-fetch("header.html")
-    .then(response => response.text())
-    .then(data => {
-        document.getElementById("header-placeholder").innerHTML = data;
-    })
-    .catch(error => {
-        console.error("Error loading header:", error);
-    });
+    /* =========================
+       LOAD CENTRAL HEADER
+    ========================= */
+
+    fetch("header.html")
+        .then(function (response) {
+            if (!response.ok) {
+                throw new Error("Could not load header.html");
+            }
+            return response.text();
+        })
+        .then(function (data) {
+            const header = document.getElementById("header-placeholder");
+
+            if (header) {
+                header.innerHTML = data;
+            }
+        })
+        .catch(function (error) {
+            console.error("Header loading error:", error);
+        });
 
 
-/* =========================
-   LOAD CENTRAL FOOTER
-========================= */
+    /* =========================
+       LOAD CENTRAL FOOTER
+    ========================= */
 
-fetch("footer.html")
-    .then(response => response.text())
-    .then(data => {
-        document.getElementById("footer-placeholder").innerHTML = data;
-    })
-    .catch(error => {
-        console.error("Error loading footer:", error);
-    });
+    fetch("footer.html")
+        .then(function (response) {
+            if (!response.ok) {
+                throw new Error("Could not load footer.html");
+            }
+            return response.text();
+        })
+        .then(function (data) {
+            const footer = document.getElementById("footer-placeholder");
+
+            if (footer) {
+                footer.innerHTML = data;
+            }
+        })
+        .catch(function (error) {
+            console.error("Footer loading error:", error);
+        });
+
+});
 
 
 /* =========================
