@@ -6,22 +6,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
     fetch("header.html")
         .then(function (response) {
-
             if (!response.ok) {
                 throw new Error("Could not load header.html");
             }
 
             return response.text();
         })
-
         .then(function (data) {
 
-            const header =
+            const headerPlaceholder =
                 document.getElementById("header-placeholder");
 
-            if (header) {
+            if (headerPlaceholder) {
 
-                header.innerHTML = data;
+                headerPlaceholder.innerHTML = data;
 
                 /* =========================
                    MOBILE MENU
@@ -33,47 +31,52 @@ document.addEventListener("DOMContentLoaded", function () {
                 const mainNav =
                     document.getElementById("mainNav");
 
-
                 if (menuToggle && mainNav) {
 
-                    menuToggle.addEventListener(
-                        "click",
-                        function () {
+                    menuToggle.addEventListener("click", function () {
 
-                            mainNav.classList.toggle("active");
+                        mainNav.classList.toggle("active");
 
-                            const isOpen =
-                                mainNav.classList.contains("active");
+                        const isOpen =
+                            mainNav.classList.contains("active");
 
-                            menuToggle.setAttribute(
-                                "aria-expanded",
-                                isOpen ? "true" : "false"
-                            );
+                        menuToggle.setAttribute(
+                            "aria-expanded",
+                            isOpen ? "true" : "false"
+                        );
 
-                        }
-                    );
+                        menuToggle.setAttribute(
+                            "aria-label",
+                            isOpen
+                                ? "Close navigation menu"
+                                : "Open navigation menu"
+                        );
+
+                    });
 
 
-                    /* CLOSE MENU WHEN A LINK IS CLICKED */
+                    /* Close menu after clicking a link */
 
                     const navLinks =
                         mainNav.querySelectorAll("a");
 
                     navLinks.forEach(function (link) {
 
-                        link.addEventListener(
-                            "click",
-                            function () {
+                        link.addEventListener("click", function () {
 
-                                mainNav.classList.remove("active");
+                            mainNav.classList.remove("active");
 
-                                menuToggle.setAttribute(
-                                    "aria-expanded",
-                                    "false"
-                                );
+                            menuToggle.setAttribute(
+                                "aria-expanded",
+                                "false"
+                            );
 
-                            }
-                        );
+                            menuToggle.setAttribute(
+                                "aria-label",
+                                "Open navigation menu"
+                            );
+
+                        });
 
                     });
 
@@ -82,7 +85,6 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
         })
-
         .catch(function (error) {
 
             console.error(
@@ -105,19 +107,18 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             return response.text();
-        })
 
+        })
         .then(function (data) {
 
-            const footer =
+            const footerPlaceholder =
                 document.getElementById("footer-placeholder");
 
-            if (footer) {
-                footer.innerHTML = data;
+            if (footerPlaceholder) {
+                footerPlaceholder.innerHTML = data;
             }
 
         })
-
         .catch(function (error) {
 
             console.error(
