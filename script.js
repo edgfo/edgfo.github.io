@@ -129,3 +129,22 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
 });
+/* =========================
+   EDGF PAGE LOADER
+========================= */
+
+window.addEventListener("load", function () {
+
+    const loader = document.getElementById("pageLoader");
+
+    if (loader) {
+
+        setTimeout(function () {
+
+            loader.classList.add("loader-hidden");
+
+        }, 300);
+
+    }
+
+});
