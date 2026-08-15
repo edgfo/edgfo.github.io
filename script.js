@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             return response.text();
         })
+
         .then(function (data) {
 
             const header =
@@ -26,17 +27,53 @@ document.addEventListener("DOMContentLoaded", function () {
                    MOBILE MENU
                 ========================= */
 
-                const menuButton =
-                    document.querySelector(".menu-toggle");
+                const menuToggle =
+                    document.getElementById("menuToggle");
 
-                const nav =
+                const mainNav =
                     document.getElementById("mainNav");
 
-                if (menuButton && nav) {
 
-                    menuButton.addEventListener("click", function () {
+                if (menuToggle && mainNav) {
 
-                        nav.classList.toggle("active");
+                    menuToggle.addEventListener(
+                        "click",
+                        function () {
+
+                            mainNav.classList.toggle("active");
+
+                            const isOpen =
+                                mainNav.classList.contains("active");
+
+                            menuToggle.setAttribute(
+                                "aria-expanded",
+                                isOpen ? "true" : "false"
+                            );
+
+                        }
+                    );
+
+
+                    /* CLOSE MENU WHEN A LINK IS CLICKED */
+
+                    const navLinks =
+                        mainNav.querySelectorAll("a");
+
+                    navLinks.forEach(function (link) {
+
+                        link.addEventListener(
+                            "click",
+                            function () {
+
+                                mainNav.classList.remove("active");
+
+                                menuToggle.setAttribute(
+                                    "aria-expanded",
+                                    "false"
+                                );
+
+                            }
+                        );
 
                     });
 
@@ -45,6 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
         })
+
         .catch(function (error) {
 
             console.error(
@@ -68,18 +106,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
             return response.text();
         })
+
         .then(function (data) {
 
             const footer =
                 document.getElementById("footer-placeholder");
 
             if (footer) {
-
                 footer.innerHTML = data;
-
             }
 
         })
+
         .catch(function (error) {
 
             console.error(
