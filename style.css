@@ -70,6 +70,9 @@ header {
     display: block;
 
     flex-shrink: 0;
+
+    /* MAKE THE LOGO WHITE */
+    filter: brightness(0) invert(1);
 }
 
 
@@ -242,6 +245,8 @@ footer a:hover {
 
         min-width: 68px;
         min-height: 68px;
+
+        filter: brightness(0) invert(1);
     }
 
 
@@ -331,6 +336,8 @@ footer a:hover {
 
         min-width: 62px;
         min-height: 62px;
+
+        filter: brightness(0) invert(1);
     }
 
 
