@@ -6,7 +6,7 @@
 
     <title>Editor's Note | EDGF</title>
 
-    <meta name="description" content="Editor's Note from Enterprise Development & Governance Facility (EDGF).">
+    <meta name="description" content="From the Editor-in-Chief's Desk - June 2026 Update from Enterprise Development & Governance Facility (EDGF).">
 
     <link rel="stylesheet" href="style.css">
 
@@ -83,7 +83,7 @@
         }
 
         /* =========================
-           EDITOR
+           EDITOR SECTION
         ========================= */
 
         .editor-section {
@@ -92,10 +92,14 @@
 
         .editor-grid {
             display: grid;
-            grid-template-columns: 330px 1fr;
+            grid-template-columns: 300px 1fr;
             gap: 50px;
             align-items: start;
         }
+
+        /* =========================
+           EDITOR PROFILE
+        ========================= */
 
         .editor-profile {
             background: #f7faf9;
@@ -139,6 +143,24 @@
             font-size: 15px;
         }
 
+        .editor-contact {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .editor-contact a {
+            color: #0b6b4f;
+            text-decoration: none;
+            word-break: break-word;
+        }
+
+        /* =========================
+           EDITOR MESSAGE
+        ========================= */
+
         .editor-message {
             background: white;
         }
@@ -146,7 +168,15 @@
         .editor-message h2 {
             color: #0b6b4f;
             font-size: 34px;
-            margin-bottom: 20px;
+            line-height: 1.3;
+            margin-bottom: 8px;
+        }
+
+        .editor-date {
+            color: #777;
+            font-size: 14px;
+            margin-bottom: 25px;
+            font-weight: 600;
         }
 
         .editor-message p {
@@ -155,10 +185,32 @@
         }
 
         .opening {
-            font-size: 21px !important;
+            font-size: 20px !important;
             color: #0b6b4f;
             font-weight: 600;
         }
+
+        .editor-message strong {
+            color: #0b6b4f;
+        }
+
+        /* =========================
+           QUOTE / EMPHASIS
+        ========================= */
+
+        .editor-quote {
+            margin: 30px 0;
+            padding: 22px 25px;
+            background: #f7faf9;
+            border-left: 5px solid #d69e2e;
+            font-size: 20px;
+            font-weight: 600;
+            color: #0b6b4f;
+        }
+
+        /* =========================
+           SIGNATURE
+        ========================= */
 
         .signature {
             margin-top: 35px;
@@ -170,59 +222,44 @@
             color: #0b6b4f;
             font-size: 22px;
             font-weight: bold;
+            margin-bottom: 5px !important;
+        }
+
+        .signature-role {
+            color: #555;
         }
 
         /* =========================
-           HIGHLIGHTS
+           COPYRIGHT
         ========================= */
 
-        .highlights {
+        .copyright-section {
             background: #f7faf9;
         }
 
-        .highlight-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
-
-        .highlight-card {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            border-left: 5px solid #d69e2e;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        }
-
-        .highlight-card h3 {
-            color: #0b6b4f;
-            margin-bottom: 10px;
-        }
-
-        /* =========================
-           CURRENT MESSAGE
-        ========================= */
-
-        .current-message {
-            max-width: 900px;
+        .copyright-box {
+            max-width: 950px;
             margin: auto;
+            background: white;
             padding: 40px;
-            background: #fff;
             border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.07);
-            border-top: 5px solid #0b6b4f;
+            border-top: 5px solid #d69e2e;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
         }
 
-        .current-message h3 {
+        .copyright-box h2 {
             color: #0b6b4f;
-            font-size: 27px;
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .copyright-box p {
             margin-bottom: 15px;
         }
 
-        .date {
-            color: #777;
-            font-size: 14px;
-            margin-bottom: 20px;
+        .copyright-box .rights {
+            font-weight: bold;
+            color: #0b6b4f;
         }
 
         /* =========================
@@ -269,6 +306,11 @@
             color: #0b6b4f;
         }
 
+        .cta-buttons a:hover {
+            transform: translateY(-2px);
+            opacity: 0.92;
+        }
+
         /* =========================
            WHATSAPP
         ========================= */
@@ -306,16 +348,12 @@
                 max-width: 450px;
                 margin: auto;
             }
-
-            .highlight-grid {
-                grid-template-columns: 1fr 1fr;
-            }
         }
 
         @media (max-width: 600px) {
 
-            .highlight-grid {
-                grid-template-columns: 1fr;
+            section {
+                padding: 55px 15px;
             }
 
             .page-hero {
@@ -326,8 +364,32 @@
                 font-size: 40px;
             }
 
-            .current-message {
+            .page-hero p {
+                font-size: 16px;
+            }
+
+            .section-title h2 {
+                font-size: 30px;
+            }
+
+            .editor-message h2 {
+                font-size: 28px;
+            }
+
+            .editor-message p {
+                font-size: 16px;
+            }
+
+            .editor-quote {
+                font-size: 18px;
+            }
+
+            .copyright-box {
                 padding: 25px 20px;
+            }
+
+            .cta-section h2 {
+                font-size: 32px;
             }
         }
     </style>
@@ -351,8 +413,8 @@
     <h1>Editor's Note</h1>
 
     <p>
-        Perspectives, reflections and messages from the leadership and
-        editorial team of EDGF.
+        Reflections, perspectives and messages from the
+        Editor-in-Chief of EDGF.
     </p>
 
 </section>
@@ -368,80 +430,138 @@
 
         <div class="section-title">
 
-            <h2>A Message from the Editor</h2>
+            <h2>From the Editor-in-Chief's Desk</h2>
 
             <p>
-                Sharing perspectives on enterprise development and governance.
+                June 2026 Update
             </p>
 
         </div>
 
         <div class="editor-grid">
 
-            <!-- EDITOR PROFILE -->
+            <!-- =========================
+                 EDITOR PROFILE
+            ========================= -->
 
             <div class="editor-profile">
 
                 <div class="editor-photo">
-                    ED
+                    GN
                 </div>
 
-                <h3>Editor's Name</h3>
+                <h3>Gideon Njini</h3>
 
                 <p class="editor-title">
-                    Editor / Executive Director
+                    Chief Executive Officer &amp; Editor-in-Chief
                 </p>
+
+                <div class="editor-contact">
+
+                    <p>
+                        Enterprise Development &amp; Governance Facility
+                    </p>
+
+                    <p>
+                        Bamenda, Cameroon
+                    </p>
+
+                    <p>
+                        <strong>Phone:</strong><br>
+                        <a href="tel:+237677439468">
+                            +237 677 439 468
+                        </a>
+                    </p>
+
+                    <p>
+                        <strong>Email:</strong><br>
+                        <a href="mailto:edgovfacility@gmail.com">
+                            edgovfacility@gmail.com
+                        </a>
+                    </p>
+
+                </div>
 
             </div>
 
 
-            <!-- MESSAGE -->
+            <!-- =========================
+                 MESSAGE
+            ========================= -->
 
             <div class="editor-message">
 
-                <h2>Welcome to EDGF</h2>
+                <h2>
+                    From the Editor-in-Chief's Desk:
+                    June 2026 Update
+                </h2>
+
+                <p class="editor-date">
+                    June 2026
+                </p>
 
                 <p class="opening">
-                    Welcome to the Enterprise Development and Governance
-                    Facility's digital platform.
+                    At the halfway point of 2026, we remain optimistic
+                    that the collective support of our donors, partners,
+                    and well-wishers toward the causes affecting the most
+                    vulnerable people and communities we serve will continue
+                    to grow and make a meaningful impact.
                 </p>
 
                 <p>
-                    EDGF is committed to contributing to a society where
-                    enterprises can thrive, institutions can operate with
-                    integrity and accountability, and communities can access
-                    opportunities that support sustainable development.
+                    Inspired by the principles and aspirations of the
+                    United Nations (UN) Sustainable Development Goals (SDGs),
+                    <strong>Enterprise Development &amp; Governance Facility
+                    (EDGF)</strong> continues to promote shared prosperity,
+                    social justice, and sustainable community development
+                    through strategic partnerships, resource mobilization,
+                    and the implementation of high-impact grassroots
+                    initiatives.
                 </p>
 
                 <p>
-                    Through this platform, we will share information about
-                    our programmes and projects, publications, activities,
-                    opportunities and perspectives on issues relevant to
-                    enterprise development and governance.
+                    Despite the ongoing socio-political challenges affecting
+                    our region of operation, we continue to envision and work
+                    toward a brighter and more peaceful future for all.
+                    Our commitment remains focused on rebuilding resilient
+                    and sustainable livelihoods, empowering vulnerable
+                    populations, and strengthening community-based solutions
+                    that foster hope, dignity, and long-term stability.
+                </p>
+
+                <div class="editor-quote">
+                    Every small but impactful initiative undertaken by EDGF
+                    represents our modest contribution toward the common good
+                    of our communities.
+                </div>
+
+                <p>
+                    We firmly believe that <strong>together, we are
+                    stronger</strong>. By promoting inclusion, advocating
+                    for social justice, and investing in sustainable
+                    development, we collectively pave the way toward a more
+                    peaceful, equitable, and prosperous society.
                 </p>
 
                 <p>
-                    We believe that meaningful development requires
-                    collaboration. Governments, businesses, civil society,
-                    communities, development partners, young people and
-                    individuals all have important roles to play.
+                    We extend our sincere gratitude to all our donors,
+                    partners, volunteers, and supporters whose continued
+                    trust and collaboration make this mission possible.
                 </p>
 
-                <p>
-                    We therefore invite you to explore our work, engage with
-                    our ideas, share your perspectives and join us in
-                    building practical solutions to development challenges.
-                </p>
+
+                <!-- SIGNATURE -->
 
                 <div class="signature">
 
                     <p class="signature-name">
-                        Editor's Name
+                        Gideon Njini
                     </p>
 
-                    <p>
-                        Editor / Executive Director<br>
-                        Enterprise Development and Governance Facility
+                    <p class="signature-role">
+                        Chief Executive Officer &amp; Editor-in-Chief<br>
+                        Enterprise Development &amp; Governance Facility (EDGF)<br>
+                        Bamenda, Cameroon
                     </p>
 
                 </div>
@@ -456,144 +576,53 @@
 
 
 <!-- =========================
-     KEY PERSPECTIVES
+     COPYRIGHT NOTICE
 ========================= -->
 
-<section class="highlights">
+<section class="copyright-section">
 
     <div class="container">
 
         <div class="section-title">
 
-            <h2>Our Current Perspectives</h2>
+            <h2>Copyright Notice</h2>
 
             <p>
-                Issues that inform our thinking and engagement.
+                Protecting EDGF's intellectual property and digital content.
             </p>
 
         </div>
 
-        <div class="highlight-grid">
+        <div class="copyright-box">
 
-            <div class="highlight-card">
-
-                <h3>Enterprise Development</h3>
-
-                <p>
-                    Strong and sustainable enterprises can contribute to
-                    employment, innovation, livelihoods and economic growth.
-                </p>
-
-            </div>
-
-            <div class="highlight-card">
-
-                <h3>Good Governance</h3>
-
-                <p>
-                    Transparent, accountable and participatory institutions
-                    are essential for sustainable development.
-                </p>
-
-            </div>
-
-            <div class="highlight-card">
-
-                <h3>Youth & Skills</h3>
-
-                <p>
-                    Investing in knowledge, skills and opportunities can help
-                    young people become active contributors to development.
-                </p>
-
-            </div>
-
-            <div class="highlight-card">
-
-                <h3>Digital Innovation</h3>
-
-                <p>
-                    Responsible technology and digital innovation can expand
-                    access to knowledge, services and economic opportunities.
-                </p>
-
-            </div>
-
-            <div class="highlight-card">
-
-                <h3>Partnership</h3>
-
-                <p>
-                    Collaboration among stakeholders can produce solutions
-                    that are more sustainable and inclusive.
-                </p>
-
-            </div>
-
-            <div class="highlight-card">
-
-                <h3>Community Voice</h3>
-
-                <p>
-                    Development initiatives are stronger when communities
-                    participate meaningfully in decisions that affect them.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     CURRENT EDITORIAL
-========================= -->
-
-<section>
-
-    <div class="container">
-
-        <div class="section-title">
-
-            <h2>Editor's Current Note</h2>
-
-            <p>
-                The latest editorial message will be featured here.
-            </p>
-
-        </div>
-
-        <div class="current-message">
-
-            <h3>
-                Building a Culture of Enterprise and Responsible Governance
-            </h3>
-
-            <p class="date">
-                Date: To be updated
+            <p class="rights">
+                All Rights Reserved.
             </p>
 
             <p>
-                Sustainable development is not achieved through isolated
-                interventions. It requires an environment where individuals
-                can develop their capabilities, enterprises can grow,
-                institutions can perform effectively and communities can
-                participate in shaping their future.
+                The copyright of all published materials and digital content
+                produced by Enterprise Development &amp; Governance Facility
+                (EDGF) is fully protected.
             </p>
 
             <p>
-                At EDGF, our aim is to contribute to this environment by
-                bringing together enterprise development, governance,
-                capacity building, innovation, research and partnerships.
+                No part of this website, publication, or related digital
+                content may be reproduced, published, broadcast, rewritten,
+                or distributed, in whole or in part, without prior written
+                permission from the Editor-in-Chief/Chief Executive Officer
+                of EDGF Cameroon.
             </p>
 
             <p>
-                This section will regularly feature the Editor's reflections
-                on emerging issues, EDGF initiatives, development trends and
-                opportunities for collaboration.
+                <strong>
+                    Enterprise Development &amp; Governance Facility (EDGF)
+                </strong><br>
+                Bamenda, Cameroon<br>
+                Phone: +237 677 439 468<br>
+                Email:
+                <a href="mailto:edgovfacility@gmail.com">
+                    edgovfacility@gmail.com
+                </a>
             </p>
 
         </div>
@@ -614,8 +643,8 @@
         <h2>Join the Conversation</h2>
 
         <p>
-            Have an idea, perspective or opportunity that you would like to
-            share with EDGF? We welcome meaningful engagement.
+            Have an idea, perspective or opportunity that you would like
+            to share with EDGF? We welcome meaningful engagement.
         </p>
 
         <div class="cta-buttons">
@@ -648,8 +677,9 @@
 
 <a
     class="whatsapp"
-    href="https://wa.me/"
+    href="https://wa.me/237677439468"
     target="_blank"
+    rel="noopener"
     aria-label="Contact EDGF on WhatsApp">
     ☎
 </a>
