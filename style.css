@@ -249,6 +249,7 @@ footer a:hover {
         justify-content: space-between;
     }
 
+
     /* =========================
        MOBILE LOGO
     ========================= */
@@ -270,11 +271,11 @@ footer a:hover {
         object-fit: contain;
         display: block;
 
-        /* Makes the logo white */
         filter: brightness(0) invert(1);
 
         flex-shrink: 0;
     }
+
 
     /* =========================
        ORGANIZATION NAME
@@ -301,6 +302,7 @@ footer a:hover {
         line-height: 1.25;
     }
 
+
     /* =========================
        HAMBURGER
     ========================= */
@@ -323,6 +325,7 @@ footer a:hover {
         flex-shrink: 0;
     }
 
+
     /* =========================
        MOBILE NAVIGATION
     ========================= */
@@ -339,13 +342,15 @@ footer a:hover {
 
         background: #0877D1;
 
-        padding: 15px;
+        /* Reduced outer spacing */
+        padding: 8px 15px;
 
         flex-direction: column;
 
         align-items: stretch;
 
-        gap: 5px;
+        /* Reduced space between menu items */
+        gap: 0;
 
         box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 
@@ -361,18 +366,31 @@ footer a:hover {
 
         width: 100%;
 
-        padding: 11px 8px;
+        /* Reduced vertical spacing */
+        padding: 6px 8px;
+
+        margin: 0;
 
         text-align: center;
 
         color: #ffffff;
 
         font-size: 14px;
+
+        line-height: 1.3;
     }
 
     nav a:hover {
         color: #d69e2e;
     }
+
+
+    /* Keep Donate and Contact compact */
+
+    nav a.cta {
+        padding: 7px 10px;
+    }
+
 
     /* =========================
        FOOTER
@@ -418,15 +436,32 @@ footer a:hover {
         padding: 6px;
     }
 
+
+    /* =========================
+       SMALL PHONE MENU
+    ========================= */
+
     nav {
-        padding: 12px;
+        padding: 6px 12px;
+
+        gap: 0;
     }
 
     nav a {
         font-size: 14px;
-        padding: 10px;
+
+        /* Very compact menu */
+        padding: 5px 8px;
+
+        line-height: 1.25;
+    }
+
+    nav a.cta {
+        padding: 6px 10px;
     }
 }
+
+
 /* =========================
    EDGF PAGE LOADER
 ========================= */
@@ -473,7 +508,7 @@ footer a:hover {
 }
 
 
-/* LOGO */
+/* LOADER LOGO */
 
 .loader-logo {
     width: 100px;
