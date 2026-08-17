@@ -473,3 +473,102 @@ footer a:hover {
 .loader-spinner {
     display: none !important;
 }
+/* =========================
+   EDGF QUICK LOADING SPINNER
+========================= */
+
+#pageLoader {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    background: #0877D1;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    z-index: 99999;
+
+    opacity: 1;
+    visibility: visible;
+
+    transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease;
+}
+
+
+/* HIDE LOADER */
+
+#pageLoader.loader-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+
+/* =========================
+   SPINNER
+========================= */
+
+.loader-spinner {
+    width: 42px;
+    height: 42px;
+
+    border: 4px solid rgba(255,255,255,0.35);
+
+    border-top: 4px solid #ffffff;
+
+    border-radius: 50%;
+
+    animation: edgfSpin 0.7s linear infinite;
+}
+
+
+/* =========================
+   SPINNER ANIMATION
+========================= */
+
+@keyframes edgfSpin {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* =========================
+   REMOVE OLD LOADER ELEMENTS
+========================= */
+
+.loader-logo,
+.loader-content p {
+    display: none !important;
+}
+
+
+/* =========================
+   MOBILE SPINNER
+========================= */
+
+@media (max-width: 500px) {
+
+    .loader-spinner {
+        width: 36px;
+        height: 36px;
+
+        border-width: 3px;
+    }
+
+}
