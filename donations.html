@@ -113,7 +113,7 @@
 
 
         /* =========================
-           INTRO
+           INTRODUCTION
         ========================= */
 
         .intro {
@@ -132,164 +132,12 @@
 
 
         /* =========================
-           DONATION OPTIONS
-        ========================= */
-
-        .donation-grid {
-
-            display: grid;
-
-            grid-template-columns:
-                repeat(3, 1fr);
-
-            gap: 25px;
-        }
-
-        .donation-card {
-
-            background: #f7faf9;
-
-            padding: 35px 28px;
-
-            border-radius: 12px;
-
-            text-align: center;
-
-            border-top:
-                5px solid #0b6b4f;
-
-            box-shadow:
-                0 5px 18px rgba(0,0,0,0.06);
-        }
-
-        .donation-icon {
-
-            width: 65px;
-            height: 65px;
-
-            margin: 0 auto 20px;
-
-            border-radius: 50%;
-
-            background: #0b6b4f;
-
-            color: #ffffff;
-
-            display: flex;
-
-            align-items: center;
-            justify-content: center;
-
-            font-size: 28px;
-        }
-
-        .donation-card h3 {
-
-            color: #0b6b4f;
-
-            font-size: 23px;
-
-            margin-bottom: 12px;
-        }
-
-        .donation-card p {
-
-            color: #555;
-
-            margin-bottom: 20px;
-        }
-
-        .donate-now {
-
-            display: inline-block;
-
-            background: #d69e2e;
-
-            color: #ffffff;
-
-            text-decoration: none;
-
-            padding: 11px 20px;
-
-            border-radius: 5px;
-
-            font-weight: bold;
-        }
-
-        .donate-now:hover {
-
-            opacity: 0.9;
-        }
-
-
-        /* =========================
-           BANK DETAILS
-        ========================= */
-
-        .details-section {
-
-            background: #f7faf9;
-        }
-
-        .details-box {
-
-            max-width: 850px;
-
-            margin: auto;
-
-            background: #ffffff;
-
-            padding: 40px;
-
-            border-radius: 12px;
-
-            box-shadow:
-                0 5px 20px rgba(0,0,0,0.06);
-        }
-
-        .details-box h3 {
-
-            color: #0b6b4f;
-
-            font-size: 27px;
-
-            margin-bottom: 20px;
-        }
-
-        .bank-row {
-
-            display: flex;
-
-            justify-content: space-between;
-
-            gap: 20px;
-
-            padding: 14px 0;
-
-            border-bottom:
-                1px solid #e5e5e5;
-        }
-
-        .bank-row strong {
-
-            color: #0b6b4f;
-        }
-
-        .placeholder {
-
-            color: #888;
-
-            font-style: italic;
-        }
-
-
-        /* =========================
            EVERY.ORG DONATIONS
         ========================= */
 
         .every-donation-section {
 
-            background: #ffffff;
+            background: #f7faf9;
         }
 
         .every-intro {
@@ -315,7 +163,7 @@
 
         .every-card {
 
-            background: #f7faf9;
+            background: #ffffff;
 
             padding: 35px 28px;
 
@@ -616,7 +464,6 @@
 
         @media (max-width: 900px) {
 
-            .donation-grid,
             .every-grid,
             .why-grid {
 
@@ -633,7 +480,6 @@
 
         @media (max-width: 600px) {
 
-            .donation-grid,
             .every-grid,
             .why-grid {
 
@@ -648,18 +494,6 @@
             .page-hero h1 {
 
                 font-size: 40px;
-            }
-
-            .details-box {
-
-                padding: 25px 20px;
-            }
-
-            .bank-row {
-
-                flex-direction: column;
-
-                gap: 5px;
             }
 
             .every-card {
@@ -690,7 +524,9 @@
 
 <section class="page-hero">
 
-    <h1>Support EDGF</h1>
+    <h1>
+        Support EDGF
+    </h1>
 
     <p>
         Your contribution can help strengthen enterprises,
@@ -711,7 +547,9 @@
 
         <div class="section-title">
 
-            <h2>Make a Difference</h2>
+            <h2>
+                Make a Difference
+            </h2>
 
             <p>
                 Every contribution can support meaningful development.
@@ -735,294 +573,6 @@
                 skills development, digital innovation, research
                 and community initiatives.
             </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     DONATION OPTIONS
-========================= -->
-
-<section>
-
-    <div class="container">
-
-        <div class="section-title">
-
-            <h2>Ways to Support</h2>
-
-            <p>
-                Choose the contribution method that works best for you.
-            </p>
-
-        </div>
-
-
-        <div class="donation-grid">
-
-
-            <div class="donation-card">
-
-                <div class="donation-icon">
-                    🏦
-                </div>
-
-                <h3>
-                    Bank Transfer
-                </h3>
-
-                <p>
-                    Support EDGF through a direct bank transfer
-                    using our official account details.
-                </p>
-
-                <a href="#bank-details"
-                   class="donate-now">
-
-                    View Details
-
-                </a>
-
-            </div>
-
-
-            <div class="donation-card">
-
-                <div class="donation-icon">
-                    📱
-                </div>
-
-                <h3>
-                    Mobile Money
-                </h3>
-
-                <p>
-                    Mobile money donation options can provide
-                    a convenient way to support EDGF.
-                </p>
-
-                <a href="#mobile-money"
-                   class="donate-now">
-
-                    View Details
-
-                </a>
-
-            </div>
-
-
-            <div class="donation-card">
-
-                <div class="donation-icon">
-                    💳
-                </div>
-
-                <h3>
-                    Every.org
-                </h3>
-
-                <p>
-                    Make a secure online donation to EDGF
-                    through Every.org.
-                </p>
-
-                <a href="#every-donations"
-                   class="donate-now">
-
-                    Donate Online
-
-                </a>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     BANK DETAILS
-========================= -->
-
-<section class="details-section"
-         id="bank-details">
-
-    <div class="container">
-
-        <div class="section-title">
-
-            <h2>Bank Transfer</h2>
-
-            <p>
-                Official EDGF banking information.
-            </p>
-
-        </div>
-
-
-        <div class="details-box">
-
-            <h3>
-                Bank Account Details
-            </h3>
-
-
-            <div class="bank-row">
-
-                <strong>
-                    Account Name
-                </strong>
-
-                <span class="placeholder">
-                    TO BE PROVIDED
-                </span>
-
-            </div>
-
-
-            <div class="bank-row">
-
-                <strong>
-                    Bank Name
-                </strong>
-
-                <span class="placeholder">
-                    TO BE PROVIDED
-                </span>
-
-            </div>
-
-
-            <div class="bank-row">
-
-                <strong>
-                    Account Number
-                </strong>
-
-                <span class="placeholder">
-                    TO BE PROVIDED
-                </span>
-
-            </div>
-
-
-            <div class="bank-row">
-
-                <strong>
-                    Branch
-                </strong>
-
-                <span class="placeholder">
-                    TO BE PROVIDED
-                </span>
-
-            </div>
-
-
-            <div class="bank-row">
-
-                <strong>
-                    SWIFT/BIC
-                </strong>
-
-                <span class="placeholder">
-                    TO BE PROVIDED
-                </span>
-
-            </div>
-
-
-            <div style="margin-top:25px;">
-
-                <strong>
-                    Important:
-                </strong>
-
-                Please use only the official EDGF banking
-                information published on this website
-                when making a donation.
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     MOBILE MONEY
-========================= -->
-
-<section id="mobile-money">
-
-    <div class="container">
-
-        <div class="section-title">
-
-            <h2>
-                Mobile Money
-            </h2>
-
-            <p>
-                Convenient options for local supporters.
-            </p>
-
-        </div>
-
-
-        <div class="details-box">
-
-            <h3>
-                Mobile Money Details
-            </h3>
-
-
-            <div class="bank-row">
-
-                <strong>
-                    Network
-                </strong>
-
-                <span class="placeholder">
-                    TO BE PROVIDED
-                </span>
-
-            </div>
-
-
-            <div class="bank-row">
-
-                <strong>
-                    Account/Phone Number
-                </strong>
-
-                <span class="placeholder">
-                    TO BE PROVIDED
-                </span>
-
-            </div>
-
-
-            <div class="bank-row">
-
-                <strong>
-                    Account Name
-                </strong>
-
-                <span class="placeholder">
-                    TO BE PROVIDED
-                </span>
-
-            </div>
 
         </div>
 
@@ -1068,7 +618,9 @@
         <div class="every-grid">
 
 
-            <!-- CASH -->
+            <!-- =========================
+                 CASH DONATION
+            ========================= -->
 
             <div class="every-card">
 
@@ -1094,7 +646,9 @@
             </div>
 
 
-            <!-- CRYPTO -->
+            <!-- =========================
+                 CRYPTO DONATION
+            ========================= -->
 
             <div class="every-card">
 
@@ -1120,7 +674,9 @@
             </div>
 
 
-            <!-- STOCK -->
+            <!-- =========================
+                 STOCK DONATION
+            ========================= -->
 
             <div class="every-card">
 
@@ -1129,8 +685,8 @@
                 </h3>
 
                 <p>
-                    Support EDGF by making a stock gift through
-                    Every.org.
+                    Support EDGF by making a stock gift
+                    through Every.org.
                 </p>
 
                 <a
@@ -1333,10 +889,8 @@
                 <div class="faq-answer">
 
                     <p>
-                        You can support EDGF through bank transfer,
-                        mobile money when available, or through
-                        Every.org using cash, cryptocurrency or
-                        stock donations.
+                        You can support EDGF through Every.org
+                        using cash, cryptocurrency or stock donations.
                     </p>
 
                 </div>
