@@ -342,14 +342,12 @@ footer a:hover {
 
         background: #0877D1;
 
-        /* Reduced outer spacing */
         padding: 8px 15px;
 
         flex-direction: column;
 
         align-items: stretch;
 
-        /* No extra space between menu items */
         gap: 0;
 
         box-shadow: 0 5px 15px rgba(0,0,0,0.2);
@@ -366,7 +364,6 @@ footer a:hover {
 
         width: 100%;
 
-        /* Compact vertical spacing */
         padding: 6px 8px;
 
         margin: 0;
@@ -385,7 +382,7 @@ footer a:hover {
     }
 
 
-    /* Keep Donate and Contact compact */
+    /* COMPACT DONATE AND CONTACT BUTTONS */
 
     nav a.cta {
         padding: 7px 10px;
@@ -450,7 +447,6 @@ footer a:hover {
     nav a {
         font-size: 14px;
 
-        /* Very compact menu */
         padding: 5px 8px;
 
         line-height: 1.25;
@@ -460,19 +456,8 @@ footer a:hover {
         padding: 6px 10px;
     }
 }
-/* =========================
-   REMOVE OLD PAGE LOADER
-========================= */
 
-#pageLoader {
-    display: none !important;
-}
 
-.loader-content,
-.loader-logo,
-.loader-spinner {
-    display: none !important;
-}
 /* =========================
    EDGF QUICK LOADING SPINNER
 ========================= */
@@ -504,7 +489,9 @@ footer a:hover {
 }
 
 
-/* HIDE LOADER */
+/* =========================
+   HIDE SPINNER
+========================= */
 
 #pageLoader.loader-hidden {
     opacity: 0;
@@ -549,10 +536,13 @@ footer a:hover {
 
 
 /* =========================
-   REMOVE OLD LOADER ELEMENTS
+   REMOVE OLD LOADER CONTENT
 ========================= */
 
-.loader-logo,
+.loader-logo {
+    display: none !important;
+}
+
 .loader-content p {
     display: none !important;
 }
