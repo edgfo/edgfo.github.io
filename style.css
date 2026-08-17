@@ -33,6 +33,7 @@ header {
 }
 
 .header-container {
+    width: 100%;
     max-width: 1200px;
     margin: auto;
     padding: 10px 25px;
@@ -48,13 +49,12 @@ header {
     display: flex;
     align-items: center;
     gap: 14px;
-
     flex-shrink: 0;
 }
 
 
 /* =========================
-   ACTUAL EDGF LOGO
+   EDGF LOGO
 ========================= */
 
 .site-logo {
@@ -68,34 +68,30 @@ header {
     object-position: center;
 
     display: block;
-
     flex-shrink: 0;
 
-    /* MAKE THE LOGO WHITE */
+    /* Makes the EDGF logo white */
     filter: brightness(0) invert(1);
 }
 
 
 /* =========================
-   EDGF BRAND
+   BRAND NAME
 ========================= */
 
 .brand {
     font-size: 20px;
     font-weight: bold;
     color: #ffffff;
-
     line-height: 1.3;
 }
 
 .brand span {
     display: block;
-
     margin-top: 3px;
 
     font-size: 11px;
     font-weight: normal;
-
     color: #ffffff;
 }
 
@@ -112,13 +108,12 @@ nav {
 
 nav a {
     text-decoration: none;
-
     color: #ffffff;
 
     font-weight: 600;
     font-size: 14px;
 
-    transition: 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 nav a:hover {
@@ -132,9 +127,7 @@ nav a:hover {
 
 .cta {
     padding: 10px 16px;
-
     border-radius: 5px;
-
     color: #ffffff !important;
 }
 
@@ -171,6 +164,209 @@ nav a:hover {
 
 
 /* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 80vh;
+
+    background:
+        linear-gradient(
+            rgba(0,60,45,0.72),
+            rgba(0,60,45,0.72)
+        ),
+        url("https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1600&q=80")
+        center / cover no-repeat;
+
+    display: flex;
+    align-items: center;
+
+    text-align: center;
+    color: #ffffff;
+
+    padding: 70px 20px;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 850px;
+    margin: auto;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 6vw, 68px);
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero h2 {
+    font-size: clamp(20px, 3vw, 30px);
+    font-weight: normal;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 720px;
+    margin: 0 auto 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.hero-buttons a {
+    display: inline-block;
+
+    padding: 13px 25px;
+
+    border-radius: 5px;
+
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero-donate {
+    background: #d69e2e;
+    color: #ffffff;
+}
+
+.hero-contact {
+    background: #ffffff;
+    color: #0b6b4f;
+}
+
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
+section {
+    padding: 75px 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-title h2 {
+    font-size: 36px;
+    color: #0b6b4f;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: #666666;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    background: #f7faf9;
+}
+
+.about-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 35px;
+}
+
+.about-card {
+    background: #ffffff;
+
+    padding: 30px;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 4px 15px rgba(0,0,0,0.06);
+}
+
+.about-card h3 {
+    color: #0b6b4f;
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   PROGRAMMES
+========================= */
+
+.programmes-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.programme-card {
+    padding: 30px;
+
+    border-radius: 10px;
+
+    background: #f7faf9;
+
+    border-top: 5px solid #0b6b4f;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.programme-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,0.08);
+}
+
+.programme-card h3 {
+    color: #0b6b4f;
+    margin-bottom: 12px;
+}
+
+
+/* =========================
+   CALL TO ACTION
+========================= */
+
+.cta-section {
+    background: #0b6b4f;
+    color: #ffffff;
+    text-align: center;
+}
+
+.cta-section h2 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.cta-section p {
+    max-width: 750px;
+    margin: 0 auto 25px;
+}
+
+
+/* =========================
    CENTRAL FOOTER
 ========================= */
 
@@ -182,6 +378,7 @@ footer {
 }
 
 .footer-grid {
+    width: 100%;
     max-width: 1100px;
     margin: auto;
 
@@ -213,7 +410,8 @@ footer a:hover {
 .copyright {
     text-align: center;
 
-    border-top: 1px solid rgba(255,255,255,0.2);
+    border-top:
+        1px solid rgba(255,255,255,0.2);
 
     margin-top: 35px;
 
@@ -226,40 +424,66 @@ footer a:hover {
 
 
 /* =========================
+   WHATSAPP
+========================= */
+
+.whatsapp {
+    position: fixed;
+
+    right: 20px;
+    bottom: 20px;
+
+    width: 55px;
+    height: 55px;
+
+    border-radius: 50%;
+
+    background: #25D366;
+    color: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+
+    font-size: 27px;
+
+    z-index: 2000;
+
+    box-shadow:
+        0 4px 15px rgba(0,0,0,0.25);
+}
+
+
+/* =========================
    TABLET / MOBILE
 ========================= */
 
 @media (max-width: 850px) {
 
-    header {
-        width: 100%;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-    }
+    /* HEADER */
 
     .header-container {
         width: 100%;
-        min-height: 80px;
-        padding: 8px 15px;
-        position: relative;
 
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        min-height: 80px;
+
+        padding: 8px 15px;
+
+        position: relative;
     }
 
 
-    /* =========================
-       MOBILE LOGO
-    ========================= */
+    /* LOGO AREA */
 
     .logo-area {
-        display: flex;
-        align-items: center;
         gap: 10px;
         min-width: 0;
     }
+
+
+    /* LOGO */
 
     .site-logo {
         width: 62px;
@@ -267,26 +491,13 @@ footer a:hover {
 
         min-width: 62px;
         min-height: 62px;
-
-        object-fit: contain;
-        object-position: center;
-
-        display: block;
-
-        filter: brightness(0) invert(1);
-
-        flex-shrink: 0;
     }
 
 
-    /* =========================
-       ORGANIZATION NAME
-    ========================= */
+    /* BRAND */
 
     .brand {
         font-size: 13px;
-        font-weight: bold;
-        color: #ffffff;
 
         line-height: 1.25;
 
@@ -294,43 +505,26 @@ footer a:hover {
     }
 
     .brand span {
-        display: block;
-
         font-size: 9px;
-        font-weight: normal;
-
-        color: #ffffff;
 
         line-height: 1.25;
     }
 
 
-    /* =========================
-       HAMBURGER
-    ========================= */
+    /* HAMBURGER */
 
     .menu-toggle {
         display: block;
 
         font-size: 28px;
-        line-height: 1;
-
-        color: #ffffff;
-
-        background: transparent;
-        border: none;
 
         padding: 8px;
-
-        cursor: pointer;
 
         flex-shrink: 0;
     }
 
 
-    /* =========================
-       MOBILE NAVIGATION
-    ========================= */
+    /* MOBILE NAVIGATION */
 
     nav {
         display: none;
@@ -352,7 +546,8 @@ footer a:hover {
 
         gap: 0;
 
-        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        box-shadow:
+            0 5px 15px rgba(0,0,0,0.2);
 
         z-index: 1100;
     }
@@ -384,24 +579,48 @@ footer a:hover {
     }
 
 
-    /* =========================
-       COMPACT DONATE & CONTACT
-    ========================= */
+    /* COMPACT BUTTONS */
 
     nav a.cta {
         padding: 7px 10px;
     }
 
 
-    /* =========================
-       FOOTER
-    ========================= */
+    /* ABOUT */
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* PROGRAMMES */
+
+    .programmes-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* FOOTER */
 
     .footer-grid {
         grid-template-columns: 1fr;
+
         text-align: center;
     }
 
+
+    /* HERO */
+
+    .hero {
+        min-height: 75vh;
+
+        padding:
+            60px 20px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
 }
 
 
@@ -413,8 +632,12 @@ footer a:hover {
 
     .header-container {
         min-height: 72px;
+
         padding: 6px 10px;
     }
+
+
+    /* LOGO */
 
     .site-logo {
         width: 55px;
@@ -424,8 +647,12 @@ footer a:hover {
         min-height: 55px;
     }
 
+
+    /* BRAND */
+
     .brand {
         font-size: 12px;
+
         max-width: 190px;
     }
 
@@ -433,20 +660,20 @@ footer a:hover {
         font-size: 8px;
     }
 
+
+    /* HAMBURGER */
+
     .menu-toggle {
         font-size: 27px;
+
         padding: 6px;
     }
 
 
-    /* =========================
-       SMALL PHONE MENU
-    ========================= */
+    /* MOBILE MENU */
 
     nav {
         padding: 6px 12px;
-
-        gap: 0;
     }
 
     nav a {
@@ -461,4 +688,45 @@ footer a:hover {
         padding: 6px 10px;
     }
 
+
+    /* HERO */
+
+    .hero {
+        min-height: 70vh;
+
+        padding:
+            50px 15px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero h2 {
+        font-size: 20px;
+    }
+
+
+    /* SECTIONS */
+
+    section {
+        padding: 55px 15px;
+    }
+
+    .section-title h2 {
+        font-size: 30px;
+    }
+
+
+    /* WHATSAPP */
+
+    .whatsapp {
+        width: 50px;
+        height: 50px;
+
+        right: 15px;
+        bottom: 15px;
+
+        font-size: 24px;
+    }
 }
