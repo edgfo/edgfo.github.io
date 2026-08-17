@@ -1,6 +1,50 @@
 document.addEventListener("DOMContentLoaded", function () {
 
     /* =========================
+       QUICK PAGE LOADER
+       Does NOT wait for full page load
+    ========================= */
+
+    let loader = document.getElementById("pageLoader");
+
+    if (!loader) {
+
+        loader = document.createElement("div");
+
+        loader.id = "pageLoader";
+
+        loader.innerHTML = `
+            <div class="loader-spinner"></div>
+        `;
+
+        document.body.appendChild(loader);
+
+    } else {
+
+        /* Remove any old logo/text and keep only spinner */
+
+        loader.innerHTML = `
+            <div class="loader-spinner"></div>
+        `;
+
+    }
+
+    /* Show loader immediately */
+
+    loader.classList.remove("loader-hidden");
+
+
+    /* Hide loader quickly */
+
+    setTimeout(function () {
+
+        loader.classList.add("loader-hidden");
+
+    }, 600);
+
+
+
+    /* =========================
        LOAD CENTRAL HEADER
     ========================= */
 
@@ -102,6 +146,7 @@ document.addEventListener("DOMContentLoaded", function () {
             );
 
         });
+
 
 
     /* =========================
