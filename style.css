@@ -460,3 +460,16 @@ footer a:hover {
         padding: 6px 10px;
     }
 }
+/* =========================
+   REMOVE OLD PAGE LOADER
+========================= */
+
+#pageLoader {
+    display: none !important;
+}
+
+.loader-content,
+.loader-logo,
+.loader-spinner {
+    display: none !important;
+}
