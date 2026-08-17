@@ -123,6 +123,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const footerPlaceholder =
                 document.getElementById("footer-placeholder");
 
+
             if (footerPlaceholder) {
 
                 footerPlaceholder.innerHTML = data;
@@ -138,64 +139,5 @@ document.addEventListener("DOMContentLoaded", function () {
             );
 
         });
-
-
-    /* =========================
-       REMOVE LOADER LOGO
-       FROM ALL PAGES
-    ========================= */
-
-    const loaderLogos =
-        document.querySelectorAll(".loader-logo");
-
-
-    loaderLogos.forEach(function (logo) {
-
-        logo.remove();
-
-    });
-
-});
-
-
-/* =========================
-   EDGF PAGE LOADER
-========================= */
-
-window.addEventListener("load", function () {
-
-    /* =========================
-       REMOVE LOADER LOGO AGAIN
-       BEFORE HIDING LOADER
-    ========================= */
-
-    const loaderLogos =
-        document.querySelectorAll(".loader-logo");
-
-
-    loaderLogos.forEach(function (logo) {
-
-        logo.remove();
-
-    });
-
-
-    /* =========================
-       HIDE PAGE LOADER
-    ========================= */
-
-    const loader =
-        document.getElementById("pageLoader");
-
-
-    if (loader) {
-
-        setTimeout(function () {
-
-            loader.classList.add("loader-hidden");
-
-        }, 300);
-
-    }
 
 });
