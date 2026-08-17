@@ -1,290 +1,389 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>About Us | EDGF</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Learn about Enterprise Development & Governance Facility, our mission, vision, values and approach to sustainable development.">
+    <title>About Us | Enterprise Development & Governance Facility</title>
+
+    <meta name="description"
+          content="Learn about Enterprise Development & Governance Facility (EDGF), its history, vision, mission, aims, community services, leadership and Theory of Change.">
 
     <link rel="stylesheet" href="style.css">
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
 
-        html {
-            scroll-behavior: smooth;
-        }
+        /* =========================
+           ABOUT PAGE
+        ========================= */
 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            line-height: 1.7;
-            color: #222;
-            background: #fff;
-        }
-
-        /* PAGE HERO */
-
-        .page-hero {
+        .about-hero {
             background:
-                linear-gradient(rgba(0,60,45,0.78), rgba(0,60,45,0.78)),
+                linear-gradient(
+                    rgba(0,60,45,0.78),
+                    rgba(0,60,45,0.78)
+                ),
                 url("https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1600&q=80")
-                center/cover no-repeat;
+                center / cover no-repeat;
 
-            color: white;
+            color: #ffffff;
             text-align: center;
-            padding: 100px 20px;
+            padding: 80px 20px;
         }
 
-        .page-hero h1 {
-            font-size: clamp(40px, 6vw, 65px);
+        .about-hero h1 {
+            font-size: clamp(38px, 6vw, 60px);
             margin-bottom: 15px;
         }
 
-        .page-hero p {
-            font-size: 19px;
-            max-width: 750px;
+        .about-hero p {
+            max-width: 800px;
             margin: auto;
+            font-size: 18px;
         }
 
-        /* GENERAL */
 
-        section {
-            padding: 75px 20px;
+        /* =========================
+           ABOUT CONTENT
+        ========================= */
+
+        .about-section {
+            padding: 70px 20px;
         }
 
-        .container {
+        .about-section:nth-child(even) {
+            background: #f7faf9;
+        }
+
+        .about-container {
+            width: 100%;
             max-width: 1100px;
             margin: auto;
         }
 
-        .section-title {
+        .about-section-title {
             text-align: center;
-            margin-bottom: 45px;
+            margin-bottom: 40px;
         }
 
-        .section-title h2 {
+        .about-section-title h2 {
             color: #0b6b4f;
-            font-size: 36px;
+            font-size: 34px;
             margin-bottom: 10px;
         }
 
-        .section-title p {
-            color: #666;
+        .about-section-title p {
+            color: #666666;
         }
 
-        /* WHO WE ARE */
-
-        .intro {
-            background: #fff;
-        }
-
-        .intro-content {
-            max-width: 900px;
+        .about-text {
+            max-width: 950px;
             margin: auto;
-            text-align: center;
-            font-size: 18px;
         }
 
-        /* MISSION VISION */
-
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
+        .about-text p {
+            margin-bottom: 18px;
         }
 
-        .card {
-            background: #f7faf9;
-            padding: 35px;
-            border-radius: 10px;
-            border-top: 5px solid #0b6b4f;
-        }
 
-        .card h3 {
-            color: #0b6b4f;
-            font-size: 25px;
-            margin-bottom: 15px;
-        }
+        /* =========================
+           INFO CARDS
+        ========================= */
 
-        /* VALUES */
-
-        .values {
-            background: #f7faf9;
-        }
-
-        .values-grid {
+        .info-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 25px;
         }
 
-        .value {
-            background: white;
-            padding: 28px;
-            text-align: center;
+        .info-card {
+            background: #ffffff;
+            padding: 30px;
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.06);
         }
 
-        .value h3 {
+        .info-card h3 {
             color: #0b6b4f;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
 
-        /* APPROACH */
+        .info-card p {
+            margin-bottom: 8px;
+        }
 
-        .approach-list {
-            max-width: 850px;
+
+        /* =========================
+           CONTACT INFORMATION
+        ========================= */
+
+        .contact-info {
+            background: #ffffff;
+            padding: 35px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            max-width: 950px;
             margin: auto;
         }
 
-        .approach-item {
-            padding: 20px;
-            margin-bottom: 15px;
-            background: #f7faf9;
-            border-left: 5px solid #d69e2e;
-            border-radius: 5px;
+        .contact-info p {
+            margin-bottom: 12px;
         }
 
-        .approach-item strong {
+        .contact-info strong {
             color: #0b6b4f;
         }
 
-        /* CTA */
-
-        .cta-section {
-            background: #0b6b4f;
-            color: white;
-            text-align: center;
-        }
-
-        .cta-section h2 {
-            font-size: 38px;
-            margin-bottom: 15px;
-        }
-
-        .cta-section p {
-            max-width: 750px;
-            margin: 0 auto 25px;
-        }
-
-        .cta-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .cta-buttons a {
+        .contact-info a {
+            color: #0b6b4f;
             text-decoration: none;
-            padding: 13px 25px;
-            border-radius: 5px;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* =========================
+           DONATION LINKS
+        ========================= */
+
+        .donation-box {
+            background: #0b6b4f;
+            color: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            max-width: 950px;
+            margin: auto;
+        }
+
+        .donation-box h3 {
+            margin-bottom: 15px;
+        }
+
+        .donation-box p {
+            margin-bottom: 12px;
+        }
+
+        .donation-box a {
+            color: #ffffff;
             font-weight: bold;
+            text-decoration: underline;
         }
 
-        .cta-donate {
-            background: #d69e2e;
-            color: white;
+
+        /* =========================
+           THEORY OF CHANGE
+        ========================= */
+
+        .theory-box {
+            background: #f7faf9;
+            border-left: 6px solid #0b6b4f;
+            padding: 35px;
+            max-width: 1000px;
+            margin: auto;
+            border-radius: 5px;
         }
 
-        .cta-contact {
-            background: white;
-            color: #0b6b4f;
+        .theory-box p {
+            margin-bottom: 18px;
         }
 
-        /* WHATSAPP */
 
-        .whatsapp {
-            position: fixed;
-            right: 20px;
-            bottom: 20px;
-            width: 55px;
-            height: 55px;
+        /* =========================
+           SERVICES LIST
+        ========================= */
+
+        .services-list {
+            max-width: 950px;
+            margin: auto;
+            counter-reset: service;
+        }
+
+        .service-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            align-items: flex-start;
+        }
+
+        .service-number {
+            min-width: 35px;
+            height: 35px;
+            background: #0b6b4f;
+            color: #ffffff;
             border-radius: 50%;
-            background: #25D366;
-            color: white;
             display: flex;
             align-items: center;
             justify-content: center;
-            text-decoration: none;
-            font-size: 26px;
-            z-index: 2000;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+            font-weight: bold;
         }
 
-        /* MOBILE */
+        .service-item p {
+            margin: 0;
+        }
+
+
+        /* =========================
+           PEOPLE / LEADERSHIP
+        ========================= */
+
+        .people-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .person-card {
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+        }
+
+        .person-card h3 {
+            color: #0b6b4f;
+            margin-bottom: 8px;
+            font-size: 18px;
+        }
+
+        .person-card p {
+            color: #555555;
+        }
+
+
+        /* =========================
+           SOCIAL LINKS
+        ========================= */
+
+        .social-links {
+            text-align: center;
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin: 8px;
+            padding: 12px 20px;
+            border-radius: 5px;
+            background: #0b6b4f;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .social-links a:hover {
+            background: #d69e2e;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
 
         @media (max-width: 850px) {
 
-            .cards,
-            .values-grid {
+            .info-grid,
+            .people-grid {
                 grid-template-columns: 1fr;
             }
 
-            .page-hero {
-                padding: 80px 20px;
+            .about-section {
+                padding: 55px 15px;
             }
+
+            .about-section-title h2 {
+                font-size: 30px;
+            }
+
+            .contact-info,
+            .donation-box,
+            .theory-box {
+                padding: 25px;
+            }
+
         }
+
     </style>
+
 </head>
+
 
 <body>
 
-<!-- CENTRAL HEADER -->
+
+<!-- =========================
+     CENTRAL HEADER
+========================= -->
 
 <div id="header-placeholder"></div>
 
 
-<!-- PAGE HERO -->
+<!-- =========================
+     ABOUT HERO
+========================= -->
 
-<section class="page-hero">
+<section class="about-hero">
 
-    <h1>About Us</h1>
+    <h1>About EDGF</h1>
 
     <p>
-        Learn more about Enterprise Development & Governance Facility,
-        our purpose, values and commitment to sustainable development.
+        Enterprise Development & Governance Facility
     </p>
 
 </section>
 
 
-<!-- WHO WE ARE -->
+<!-- =========================
+     WHO WE ARE
+========================= -->
 
-<section class="intro">
+<section class="about-section">
 
-    <div class="container">
+    <div class="about-container">
 
-        <div class="section-title">
+        <div class="about-section-title">
 
             <h2>Who We Are</h2>
 
-            <p>Enterprise Development & Governance Facility</p>
+            <p>Our history and organizational background</p>
 
         </div>
 
-        <div class="intro-content">
+
+        <div class="about-text">
 
             <p>
-                Enterprise Development & Governance Facility (EDGF) is
-                committed to supporting individuals, enterprises,
-                institutions and communities to develop their capacity,
-                strengthen governance and create sustainable opportunities.
+                Initiated by Gideon Njini, Enterprise Development & Governance
+                Facility (EDGF) was registered in July 2009.
             </p>
 
-            <br>
+            <p>
+                EDGF functions as a community based charitable Learning
+                Organization working in the process of promoting local living
+                economies and supporting indigenous communities.
+            </p>
 
             <p>
-                We believe that sustainable development requires a
-                combination of strong institutions, responsible leadership,
-                vibrant enterprises, innovation and meaningful participation
-                by communities.
+                The Cameroon Anglophone Crisis which started in 2016 caused us
+                to re-focus our services to be able to serve internally
+                displaced persons relocated to the regional capital city of
+                Bamenda.
+            </p>
+
+            <p>
+                In fulfillment of EDGF’s charitable objectives, we are working
+                with our associated organization, the Accountancy Services &
+                Audit (ASA) Group Cameroon and providing consultancy services
+                to other community based charities.
+            </p>
+
+            <p>
+                At EDGF we serve by working to create common and thriving
+                futures for everyone.
             </p>
 
         </div>
@@ -294,43 +393,122 @@
 </section>
 
 
-<!-- MISSION AND VISION -->
+<!-- =========================
+     OFFICE & CONTACT
+========================= -->
 
-<section>
+<section class="about-section">
 
-    <div class="container">
+    <div class="about-container">
 
-        <div class="section-title">
+        <div class="about-section-title">
 
-            <h2>Our Direction</h2>
-
-            <p>What guides our work</p>
+            <h2>Office & Contact Information</h2>
 
         </div>
 
-        <div class="cards">
 
-            <div class="card">
+        <div class="contact-info">
 
-                <h3>Our Mission</h3>
+            <p>
+                <strong>Office Address:</strong>
+                Storey Building Right hand from Ngen Junction – Ghana Street,
+                Nkwen, Bamenda City
+            </p>
+
+            <p>
+                <strong>Postal Address:</strong>
+                P.O. Box 5011 Nkwen Bamenda, North West Region,
+                Cameroon, West Africa
+            </p>
+
+            <p>
+                <strong>Contact:</strong>
+                Gideon Njini
+            </p>
+
+            <p>
+                <strong>Position:</strong>
+                Chief Executive Officer
+            </p>
+
+            <p>
+                <strong>Phone:</strong>
+                <a href="tel:+237677439468">
+                    (237) 677 439 468
+                </a>
+            </p>
+
+            <p>
+                <strong>Email:</strong>
+                <a href="mailto:edgovfacility@gmail.com">
+                    edgovfacility@gmail.com
+                </a>
+            </p>
+
+            <p>
+                <strong>Website:</strong>
+                <a href="http://www.edgfo.org" target="_blank"
+                   rel="noopener noreferrer">
+                    www.edgfo.org
+                </a>
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     VISION MISSION AIMS
+========================= -->
+
+<section class="about-section">
+
+    <div class="about-container">
+
+        <div class="about-section-title">
+
+            <h2>Our Vision, Mission & Aims</h2>
+
+        </div>
+
+
+        <div class="info-grid">
+
+            <div class="info-card">
+
+                <h3>Vision</h3>
 
                 <p>
-                    To empower individuals, enterprises and communities
-                    through enterprise development, capacity building,
-                    governance support, innovation and strategic partnerships
-                    that create sustainable opportunities.
+                    Social Justice; Love, Peace and Equal Opportunity for all.
                 </p>
 
             </div>
 
-            <div class="card">
 
-                <h3>Our Vision</h3>
+            <div class="info-card">
+
+                <h3>Mission</h3>
 
                 <p>
-                    A society where enterprises thrive, institutions are
-                    accountable and transparent, and communities have the
-                    capacity and opportunities to achieve sustainable
+                    Promotion of Human Dignity, Children’s Education, the
+                    Family, Gender, Wealth Equality, and Sustainable Community
+                    Development Strategies.
+                </p>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <h3>Aims</h3>
+
+                <p>
+                    Empowering the vulnerable poor through education, skills
+                    and seed grants for self-reliance, group and community
                     development.
                 </p>
 
@@ -343,124 +521,235 @@
 </section>
 
 
-<!-- VALUES -->
+<!-- =========================
+     FUNDRAISING
+========================= -->
 
-<section class="values">
+<section class="about-section">
 
-    <div class="container">
+    <div class="about-container">
 
-        <div class="section-title">
+        <div class="about-section-title">
 
-            <h2>Our Core Values</h2>
+            <h2>Fundraising & Donations</h2>
 
             <p>
-                The principles that guide our decisions and actions.
+                Supporting EDGF's charitable work
             </p>
 
         </div>
 
-        <div class="values-grid">
 
-            <div class="value">
-                <h3>Integrity</h3>
-                <p>
-                    We promote honesty, ethical conduct and responsible
-                    leadership.
-                </p>
-            </div>
+        <div class="donation-box">
 
-            <div class="value">
-                <h3>Accountability</h3>
-                <p>
-                    We take responsibility for our decisions, resources
-                    and results.
-                </p>
-            </div>
-
-            <div class="value">
-                <h3>Transparency</h3>
-                <p>
-                    We value openness and clear communication with our
-                    stakeholders.
-                </p>
-            </div>
-
-            <div class="value">
-                <h3>Inclusion</h3>
-                <p>
-                    We seek to ensure that different groups can participate
-                    and benefit from development opportunities.
-                </p>
-            </div>
-
-            <div class="value">
-                <h3>Innovation</h3>
-                <p>
-                    We encourage creative approaches to development
-                    challenges.
-                </p>
-            </div>
-
-            <div class="value">
-                <h3>Partnership</h3>
-                <p>
-                    We believe lasting development is achieved through
-                    collaboration.
-                </p>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- OUR APPROACH -->
-
-<section>
-
-    <div class="container">
-
-        <div class="section-title">
-
-            <h2>Our Approach</h2>
+            <h3>We Accept Cash, Crypto and Stock Gifts</h3>
 
             <p>
-                How EDGF seeks to create meaningful and sustainable impact.
+                For EDGF’s Fundraising and Donations Appeals we accept Cash,
+                Crypto and Stock Gifts.
+            </p>
+
+            <p>
+                <strong>Cash donations:</strong>
+                <a href="https://www.every.org/edgf"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Donate through Every.org
+                </a>
+            </p>
+
+            <p>
+                <strong>Crypto gifts:</strong>
+                <a href="https://www.every.org/edgf/#donate/crypto"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Give Crypto
+                </a>
+            </p>
+
+            <p>
+                <strong>Stock gifts:</strong>
+                <a href="https://www.every.org/edgf/#donate/stocks"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Give Stocks
+                </a>
             </p>
 
         </div>
 
-        <div class="approach-list">
+    </div>
 
-            <div class="approach-item">
-                <strong>Capacity Building:</strong>
-                We strengthen knowledge, skills and institutional capacity.
+</section>
+
+
+<!-- =========================
+     THEORY OF CHANGE
+========================= -->
+
+<section class="about-section">
+
+    <div class="about-container">
+
+        <div class="about-section-title">
+
+            <h2>EDGF Theory of Change</h2>
+
+        </div>
+
+
+        <div class="theory-box">
+
+            <p>
+                If internally displaced persons and their children – crisis
+                victims – are supported with education, job creation skills,
+                and micro business development with seed capital; facilitating
+                and enabling the vulnerable to gain access and be financially
+                involved on issues of their livelihoods.
+            </p>
+
+            <p>
+                Back in the rural communities our services of safe drinking
+                water projects enhanced with WASH education and facilities
+                improves our client communities’ well-being and healthy living.
+            </p>
+
+            <p>
+                We facilitate and support our client communities to be engaged
+                in micro-enterprise, improved farming systems and environmental
+                protection.
+            </p>
+
+            <p>
+                Our impactful services aim at improving people and community
+                knowledge, their incomes, wellbeing, and resilience, that will
+                lead to empowered individuals and communities capable of
+                self-reliance, peaceful coexistence, and sustainable
+                development.
+            </p>
+
+            <p>
+                EDGF’s theory of change contributes directly to its vision of
+                Social Justice, Love, Peace, and Equal Opportunity for all.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     COMMUNITY SERVICES
+========================= -->
+
+<section class="about-section">
+
+    <div class="about-container">
+
+        <div class="about-section-title">
+
+            <h2>EDGF’s Community Services</h2>
+
+            <p>
+                Guided by our Theory of Change, we offer the following services:
+            </p>
+
+        </div>
+
+
+        <div class="services-list">
+
+            <div class="service-item">
+
+                <div class="service-number">1</div>
+
+                <p>
+                    Fee support for the children of the poor and orphans to
+                    attend school.
+                </p>
+
             </div>
 
-            <div class="approach-item">
-                <strong>Enterprise Support:</strong>
-                We promote entrepreneurship, innovation and sustainable
-                enterprise development.
+
+            <div class="service-item">
+
+                <div class="service-number">2</div>
+
+                <p>
+                    Adult literacy training.
+                </p>
+
             </div>
 
-            <div class="approach-item">
-                <strong>Good Governance:</strong>
-                We support accountability, transparency, participation and
-                effective institutional practices.
+
+            <div class="service-item">
+
+                <div class="service-number">3</div>
+
+                <p>
+                    Financial literacy and inclusion of the poor,
+                    especially women.
+                </p>
+
             </div>
 
-            <div class="approach-item">
-                <strong>Community Participation:</strong>
-                We encourage communities to participate actively in
-                identifying and addressing their development priorities.
+
+            <div class="service-item">
+
+                <div class="service-number">4</div>
+
+                <p>
+                    Water Sanitation Hygiene (WASH) and water supply projects.
+                </p>
+
             </div>
 
-            <div class="approach-item">
-                <strong>Partnerships:</strong>
-                We collaborate with public institutions, private sector
-                actors, civil society, communities and development partners.
+
+            <div class="service-item">
+
+                <div class="service-number">5</div>
+
+                <p>
+                    Occupational – Job place Self-help Skills for the
+                    underprivileged.
+                </p>
+
+            </div>
+
+
+            <div class="service-item">
+
+                <div class="service-number">6</div>
+
+                <p>
+                    Community micro enterprise creation and development.
+                </p>
+
+            </div>
+
+
+            <div class="service-item">
+
+                <div class="service-number">7</div>
+
+                <p>
+                    Farming systems improvements / Environmental Education.
+                </p>
+
+            </div>
+
+
+            <div class="service-item">
+
+                <div class="service-number">8</div>
+
+                <p>
+                    Services to Internally Displaced Persons (IDPs),
+                    most especially women and youths.
+                </p>
+
             </div>
 
         </div>
@@ -470,28 +759,189 @@
 </section>
 
 
-<!-- CTA -->
+<!-- =========================
+     BOARD OF DIRECTORS
+========================= -->
 
-<section class="cta-section">
+<section class="about-section">
 
-    <div class="container">
+    <div class="about-container">
 
-        <h2>Work With Us</h2>
+        <div class="about-section-title">
 
-        <p>
-            Whether you are an individual, organization, enterprise,
-            development partner or institution, there are opportunities
-            to collaborate with EDGF.
-        </p>
+            <h2>Board of Directors</h2>
 
-        <div class="cta-buttons">
+        </div>
 
-            <a href="donations.html" class="cta-donate">
-                Donate
+
+        <div class="people-grid">
+
+            <div class="person-card">
+                <h3>Francis Nchii Njuakom</h3>
+                <p>Chair</p>
+            </div>
+
+            <div class="person-card">
+                <h3>Dr. Jam Maurine</h3>
+                <p>Vice Chair</p>
+            </div>
+
+            <div class="person-card">
+                <h3>Mrs. Joy Kimbo</h3>
+                <p>Member</p>
+            </div>
+
+            <div class="person-card">
+                <h3>Rev. Liberty Ayeah</h3>
+                <p>Member</p>
+            </div>
+
+            <div class="person-card">
+                <h3>Mrs. Timchia Agnes</h3>
+                <p>Member</p>
+            </div>
+
+            <div class="person-card">
+                <h3>Simon Ngwainmbi</h3>
+                <p>Member</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     MANAGEMENT / STAFF
+========================= -->
+
+<section class="about-section">
+
+    <div class="about-container">
+
+        <div class="about-section-title">
+
+            <h2>Management / Staff Team</h2>
+
+        </div>
+
+
+        <div class="people-grid">
+
+            <div class="person-card">
+
+                <h3>Gideon Njini, FAIA, MBA</h3>
+
+                <p>
+                    Chief Executive Officer
+                </p>
+
+                <p>
+                    25 years’ work experience in non-profit management,
+                    administration and consultancy services.
+                </p>
+
+            </div>
+
+
+            <div class="person-card">
+
+                <h3>Honest Nikizia Mbzigha</h3>
+
+                <p>
+                    Projects Officer
+                </p>
+
+                <p>
+                    Diploma in Community Development.
+                </p>
+
+            </div>
+
+
+            <div class="person-card">
+
+                <h3>Evangeline Fuen</h3>
+
+                <p>
+                    Finance and Administration Officer
+                </p>
+
+                <p>
+                    HND Accounting.
+                </p>
+
+            </div>
+
+
+            <div class="person-card">
+
+                <h3>Susan Mbuh</h3>
+
+                <p>
+                    Community Development Officer
+                </p>
+
+                <p>
+                    BSc Marketing.
+                </p>
+
+            </div>
+
+
+            <div class="person-card">
+
+                <h3>Ndonyi Nimbom Njini</h3>
+
+                <p>
+                    Website Administrator
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SOCIAL MEDIA
+========================= -->
+
+<section class="about-section">
+
+    <div class="about-container">
+
+        <div class="about-section-title">
+
+            <h2>Connect With EDGF</h2>
+
+            <p>
+                Follow and learn more about our work online.
+            </p>
+
+        </div>
+
+
+        <div class="social-links">
+
+            <a
+                href="https://web.facebook.com/profile.php?id=100080280316470"
+                target="_blank"
+                rel="noopener noreferrer">
+                Facebook Page
             </a>
 
-            <a href="contact.html" class="cta-contact">
-                Contact Us
+
+            <a
+                href="https://www.linkedin.com/in/gideon-njini-83184622/?originalSubdomain=cm"
+                target="_blank"
+                rel="noopener noreferrer">
+                LinkedIn Profile
             </a>
 
         </div>
@@ -501,26 +951,34 @@
 </section>
 
 
-<!-- CENTRAL FOOTER -->
+<!-- =========================
+     CENTRAL FOOTER
+========================= -->
 
 <div id="footer-placeholder"></div>
 
 
-<!-- WHATSAPP -->
+<!-- =========================
+     WHATSAPP
+========================= -->
 
 <a
     class="whatsapp"
     href="https://wa.me/"
     target="_blank"
-    aria-label="Contact EDGF on WhatsApp"
->
+    rel="noopener noreferrer"
+    aria-label="Contact EDGF on WhatsApp">
     ☎
 </a>
 
 
-<!-- CENTRAL SCRIPT -->
+<!-- =========================
+     JAVASCRIPT
+========================= -->
 
 <script src="script.js"></script>
 
+
 </body>
+
 </html>
