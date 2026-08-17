@@ -1,47 +1,8 @@
+/* =========================
+   EDGF CENTRAL SITE SCRIPT
+========================= */
+
 document.addEventListener("DOMContentLoaded", function () {
-
-    /* =========================
-       QUICK PAGE LOADER
-       Does NOT wait for full page load
-    ========================= */
-
-    let loader = document.getElementById("pageLoader");
-
-    if (!loader) {
-
-        loader = document.createElement("div");
-
-        loader.id = "pageLoader";
-
-        loader.innerHTML = `
-            <div class="loader-spinner"></div>
-        `;
-
-        document.body.appendChild(loader);
-
-    } else {
-
-        /* Remove any old logo/text and keep only spinner */
-
-        loader.innerHTML = `
-            <div class="loader-spinner"></div>
-        `;
-
-    }
-
-    /* Show loader immediately */
-
-    loader.classList.remove("loader-hidden");
-
-
-    /* Hide loader quickly */
-
-    setTimeout(function () {
-
-        loader.classList.add("loader-hidden");
-
-    }, 600);
-
 
 
     /* =========================
@@ -58,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
             return response.text();
 
         })
+
         .then(function (data) {
 
             const headerPlaceholder =
@@ -81,32 +43,35 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 if (menuToggle && mainNav) {
 
-                    menuToggle.addEventListener("click", function () {
+                    menuToggle.addEventListener(
+                        "click",
+                        function () {
 
-                        mainNav.classList.toggle("active");
+                            mainNav.classList.toggle("active");
 
-                        const isOpen =
-                            mainNav.classList.contains("active");
-
-
-                        menuToggle.setAttribute(
-                            "aria-expanded",
-                            isOpen ? "true" : "false"
-                        );
+                            const isOpen =
+                                mainNav.classList.contains("active");
 
 
-                        menuToggle.setAttribute(
-                            "aria-label",
-                            isOpen
-                                ? "Close navigation menu"
-                                : "Open navigation menu"
-                        );
+                            menuToggle.setAttribute(
+                                "aria-expanded",
+                                isOpen ? "true" : "false"
+                            );
 
-                    });
+
+                            menuToggle.setAttribute(
+                                "aria-label",
+                                isOpen
+                                    ? "Close navigation menu"
+                                    : "Open navigation menu"
+                            );
+
+                        }
+                    );
 
 
                     /* =========================
-                       CLOSE MENU AFTER LINK CLICK
+                       CLOSE MENU AFTER LINK
                     ========================= */
 
                     const navLinks =
@@ -115,21 +80,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     navLinks.forEach(function (link) {
 
-                        link.addEventListener("click", function () {
+                        link.addEventListener(
+                            "click",
+                            function () {
 
-                            mainNav.classList.remove("active");
+                                mainNav.classList.remove("active");
 
-                            menuToggle.setAttribute(
-                                "aria-expanded",
-                                "false"
-                            );
+                                menuToggle.setAttribute(
+                                    "aria-expanded",
+                                    "false"
+                                );
 
-                            menuToggle.setAttribute(
-                                "aria-label",
-                                "Open navigation menu"
-                            );
+                                menuToggle.setAttribute(
+                                    "aria-label",
+                                    "Open navigation menu"
+                                );
 
-                        });
+                            }
+                        );
 
                     });
 
@@ -138,6 +106,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
         })
+
         .catch(function (error) {
 
             console.error(
@@ -163,6 +132,7 @@ document.addEventListener("DOMContentLoaded", function () {
             return response.text();
 
         })
+
         .then(function (data) {
 
             const footerPlaceholder =
@@ -176,6 +146,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
         })
+
         .catch(function (error) {
 
             console.error(
