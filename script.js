@@ -1,9 +1,8 @@
 /* =========================
-   EDGF CENTRAL SITE SCRIPT
+   EDGFO CENTRAL SITE SCRIPT
 ========================= */
 
 document.addEventListener("DOMContentLoaded", function () {
-
 
     /* =========================
        LOAD CENTRAL HEADER
@@ -25,85 +24,96 @@ document.addEventListener("DOMContentLoaded", function () {
             const headerPlaceholder =
                 document.getElementById("header-placeholder");
 
-            if (headerPlaceholder) {
+            if (!headerPlaceholder) {
+                return;
+            }
 
-                headerPlaceholder.innerHTML = data;
+            /* Insert central header */
 
-
-                /* =========================
-                   MOBILE MENU
-                ========================= */
-
-                const menuToggle =
-                    document.getElementById("menuToggle");
-
-                const mainNav =
-                    document.getElementById("mainNav");
+            headerPlaceholder.innerHTML = data;
 
 
-                if (menuToggle && mainNav) {
+            /* =========================
+               MOBILE MENU
+            ========================= */
 
-                    menuToggle.addEventListener(
-                        "click",
-                        function () {
+            const menuToggle =
+                document.getElementById("menuToggle");
 
-                            mainNav.classList.toggle("active");
-
-                            const isOpen =
-                                mainNav.classList.contains("active");
-
-
-                            menuToggle.setAttribute(
-                                "aria-expanded",
-                                isOpen ? "true" : "false"
-                            );
+            const mainNav =
+                document.getElementById("mainNav");
 
 
-                            menuToggle.setAttribute(
-                                "aria-label",
-                                isOpen
-                                    ? "Close navigation menu"
-                                    : "Open navigation menu"
-                            );
+            if (!menuToggle || !mainNav) {
+                console.error(
+                    "Mobile menu elements not found in header.html"
+                );
 
-                        }
+                return;
+            }
+
+
+            /* =========================
+               OPEN / CLOSE MENU
+            ========================= */
+
+            menuToggle.addEventListener(
+                "click",
+                function () {
+
+                    mainNav.classList.toggle("active");
+
+                    const isOpen =
+                        mainNav.classList.contains("active");
+
+
+                    menuToggle.setAttribute(
+                        "aria-expanded",
+                        isOpen ? "true" : "false"
                     );
 
 
-                    /* =========================
-                       CLOSE MENU AFTER LINK
-                    ========================= */
-
-                    const navLinks =
-                        mainNav.querySelectorAll("a");
-
-
-                    navLinks.forEach(function (link) {
-
-                        link.addEventListener(
-                            "click",
-                            function () {
-
-                                mainNav.classList.remove("active");
-
-                                menuToggle.setAttribute(
-                                    "aria-expanded",
-                                    "false"
-                                );
-
-                                menuToggle.setAttribute(
-                                    "aria-label",
-                                    "Open navigation menu"
-                                );
-
-                            }
-                        );
-
-                    });
+                    menuToggle.setAttribute(
+                        "aria-label",
+                        isOpen
+                            ? "Close navigation menu"
+                            : "Open navigation menu"
+                    );
 
                 }
+            );
 
-            }
+
+            /* =========================
+               CLOSE MENU AFTER LINK CLICK
+            ========================= */
+
+            const navLinks =
+                mainNav.querySelectorAll("a");
+
+
+            navLinks.forEach(function (link) {
+
+                link.addEventListener(
+                    "click",
+                    function () {
+
+                        mainNav.classList.remove("active");
+
+                        menuToggle.setAttribute(
+                            "aria-expanded",
+                            "false"
+                        );
+
+                        menuToggle.setAttribute(
+                            "aria-label",
+                            "Open navigation menu"
+                        );
+
+                    }
+                );
+
+            });
 
         })
 
@@ -115,7 +125,6 @@ document.addEventListener("DOMContentLoaded", function () {
             );
 
         });
-
 
 
     /* =========================
@@ -139,11 +148,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 document.getElementById("footer-placeholder");
 
 
-            if (footerPlaceholder) {
-
-                footerPlaceholder.innerHTML = data;
-
+            if (!footerPlaceholder) {
+                return;
             }
+
+
+            /* Insert central footer */
+
+            footerPlaceholder.innerHTML = data;
 
         })
 
