@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <title>Donations | EDGF</title>
 
-    <meta name="description" content="Support Enterprise Development & Governance Facility through donations and partnerships.">
+    <meta name="description"
+          content="Support Enterprise Development & Governance Facility through cash, crypto, stock donations and partnerships.">
 
     <link rel="stylesheet" href="style.css">
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -25,359 +31,651 @@
             font-family: Arial, Helvetica, sans-serif;
             line-height: 1.7;
             color: #222;
-            background: #fff;
+            background: #ffffff;
         }
+
 
         /* =========================
            HERO
         ========================= */
 
         .page-hero {
-            background:
-                linear-gradient(rgba(0,60,45,0.80), rgba(0,60,45,0.80)),
-                url("https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?auto=format&fit=crop&w=1600&q=80")
-                center/cover no-repeat;
 
-            color: white;
+            background:
+                linear-gradient(
+                    rgba(0,60,45,0.80),
+                    rgba(0,60,45,0.80)
+                ),
+                url("https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?auto=format&fit=crop&w=1600&q=80")
+                center / cover no-repeat;
+
+            color: #ffffff;
             text-align: center;
+
             padding: 105px 20px;
         }
 
         .page-hero h1 {
+
             font-size: clamp(40px, 6vw, 65px);
+
             margin-bottom: 15px;
         }
 
         .page-hero p {
+
             max-width: 800px;
+
             margin: auto;
+
             font-size: 19px;
         }
+
 
         /* =========================
            GENERAL
         ========================= */
 
         section {
+
             padding: 75px 20px;
         }
 
         .container {
+
+            width: 100%;
+
             max-width: 1100px;
+
             margin: auto;
         }
 
         .section-title {
+
             text-align: center;
+
             margin-bottom: 45px;
         }
 
         .section-title h2 {
+
             color: #0b6b4f;
+
             font-size: 36px;
+
             margin-bottom: 10px;
         }
 
         .section-title p {
+
             color: #666;
         }
+
 
         /* =========================
            INTRO
         ========================= */
 
         .intro {
+
             text-align: center;
         }
 
         .intro-text {
+
             max-width: 850px;
+
             margin: auto;
+
             font-size: 18px;
         }
+
 
         /* =========================
            DONATION OPTIONS
         ========================= */
 
         .donation-grid {
+
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
             gap: 25px;
         }
 
         .donation-card {
+
             background: #f7faf9;
+
             padding: 35px 28px;
+
             border-radius: 12px;
+
             text-align: center;
-            border-top: 5px solid #0b6b4f;
-            box-shadow: 0 5px 18px rgba(0,0,0,0.06);
+
+            border-top:
+                5px solid #0b6b4f;
+
+            box-shadow:
+                0 5px 18px rgba(0,0,0,0.06);
         }
 
         .donation-icon {
+
             width: 65px;
             height: 65px;
+
             margin: 0 auto 20px;
+
             border-radius: 50%;
+
             background: #0b6b4f;
-            color: white;
+
+            color: #ffffff;
+
             display: flex;
+
             align-items: center;
             justify-content: center;
+
             font-size: 28px;
         }
 
         .donation-card h3 {
+
             color: #0b6b4f;
+
             font-size: 23px;
+
             margin-bottom: 12px;
         }
 
         .donation-card p {
+
             color: #555;
+
             margin-bottom: 20px;
         }
 
         .donate-now {
+
             display: inline-block;
+
             background: #d69e2e;
-            color: white;
+
+            color: #ffffff;
+
             text-decoration: none;
+
             padding: 11px 20px;
+
             border-radius: 5px;
+
             font-weight: bold;
         }
+
+        .donate-now:hover {
+
+            opacity: 0.9;
+        }
+
 
         /* =========================
            BANK DETAILS
         ========================= */
 
         .details-section {
+
             background: #f7faf9;
         }
 
         .details-box {
+
             max-width: 850px;
+
             margin: auto;
-            background: white;
+
+            background: #ffffff;
+
             padding: 40px;
+
             border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+
+            box-shadow:
+                0 5px 20px rgba(0,0,0,0.06);
         }
 
         .details-box h3 {
+
             color: #0b6b4f;
+
             font-size: 27px;
+
             margin-bottom: 20px;
         }
 
         .bank-row {
+
             display: flex;
+
             justify-content: space-between;
+
             gap: 20px;
+
             padding: 14px 0;
-            border-bottom: 1px solid #e5e5e5;
+
+            border-bottom:
+                1px solid #e5e5e5;
         }
 
         .bank-row strong {
+
             color: #0b6b4f;
         }
 
         .placeholder {
+
             color: #888;
+
             font-style: italic;
         }
+
+
+        /* =========================
+           EVERY.ORG DONATIONS
+        ========================= */
+
+        .every-donation-section {
+
+            background: #ffffff;
+        }
+
+        .every-intro {
+
+            max-width: 850px;
+
+            margin: 0 auto 35px;
+
+            text-align: center;
+
+            font-size: 18px;
+        }
+
+        .every-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .every-card {
+
+            background: #f7faf9;
+
+            padding: 35px 28px;
+
+            border-radius: 12px;
+
+            text-align: center;
+
+            border-top:
+                5px solid #d69e2e;
+
+            box-shadow:
+                0 5px 18px rgba(0,0,0,0.06);
+        }
+
+        .every-card h3 {
+
+            color: #0b6b4f;
+
+            font-size: 23px;
+
+            margin-bottom: 12px;
+        }
+
+        .every-card p {
+
+            color: #555;
+
+            margin-bottom: 22px;
+        }
+
+        .every-button {
+
+            display: inline-block;
+
+            background: #0b6b4f;
+
+            color: #ffffff;
+
+            text-decoration: none;
+
+            padding: 11px 22px;
+
+            border-radius: 5px;
+
+            font-weight: bold;
+        }
+
+        .every-button:hover {
+
+            background: #08583f;
+        }
+
+        .every-note {
+
+            margin-top: 30px;
+
+            text-align: center;
+
+            color: #666;
+
+            font-size: 14px;
+        }
+
 
         /* =========================
            WHY DONATE
         ========================= */
 
         .why-grid {
+
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
             gap: 25px;
         }
 
         .why-card {
+
             padding: 28px;
-            background: #fff;
-            border: 1px solid #e5e5e5;
+
+            background: #ffffff;
+
+            border:
+                1px solid #e5e5e5;
+
             border-radius: 10px;
         }
 
         .why-card h3 {
+
             color: #0b6b4f;
+
             margin-bottom: 10px;
         }
+
 
         /* =========================
            TRANSPARENCY
         ========================= */
 
         .transparency {
+
             background: #f7faf9;
         }
 
         .transparency-box {
+
             max-width: 850px;
+
             margin: auto;
+
             text-align: center;
+
             padding: 35px;
-            background: white;
+
+            background: #ffffff;
+
             border-radius: 12px;
         }
 
         .transparency-box h3 {
+
             color: #0b6b4f;
+
             margin-bottom: 15px;
         }
+
 
         /* =========================
            FAQ
         ========================= */
 
         .faq {
+
             max-width: 850px;
+
             margin: auto;
         }
 
         .faq-item {
+
             margin-bottom: 15px;
-            border: 1px solid #ddd;
+
+            border:
+                1px solid #ddd;
+
             border-radius: 8px;
+
             overflow: hidden;
         }
 
         .faq-question {
+
             width: 100%;
+
             text-align: left;
+
             padding: 18px 20px;
+
             border: none;
+
             background: #f7faf9;
+
             color: #0b6b4f;
+
             font-size: 17px;
+
             font-weight: bold;
+
             cursor: pointer;
         }
 
         .faq-answer {
+
             display: none;
+
             padding: 18px 20px;
-            background: white;
+
+            background: #ffffff;
+
             color: #555;
         }
 
         .faq-answer.show {
+
             display: block;
         }
+
 
         /* =========================
            MAIN CTA
         ========================= */
 
         .cta-section {
+
             background: #0b6b4f;
-            color: white;
+
+            color: #ffffff;
+
             text-align: center;
         }
 
         .cta-section h2 {
+
             font-size: 40px;
+
             margin-bottom: 15px;
         }
 
         .cta-section p {
+
             max-width: 750px;
+
             margin: 0 auto 25px;
         }
 
         .cta-buttons {
+
             display: flex;
+
             justify-content: center;
+
             gap: 15px;
+
             flex-wrap: wrap;
         }
 
         .cta-buttons a {
+
             text-decoration: none;
+
             padding: 13px 25px;
+
             border-radius: 5px;
+
             font-weight: bold;
         }
 
         .cta-donate {
+
             background: #d69e2e;
-            color: white;
+
+            color: #ffffff;
         }
 
         .cta-contact {
-            background: white;
+
+            background: #ffffff;
+
             color: #0b6b4f;
         }
+
 
         /* =========================
            WHATSAPP
         ========================= */
 
         .whatsapp {
+
             position: fixed;
+
             right: 20px;
+
             bottom: 20px;
+
             width: 55px;
+
             height: 55px;
+
             border-radius: 50%;
+
             background: #25D366;
-            color: white;
+
+            color: #ffffff;
+
             display: flex;
+
             align-items: center;
+
             justify-content: center;
+
             text-decoration: none;
+
             font-size: 26px;
+
             z-index: 2000;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+
+            box-shadow:
+                0 4px 15px rgba(0,0,0,0.25);
         }
 
+
         /* =========================
-           MOBILE
+           TABLET
         ========================= */
 
         @media (max-width: 900px) {
 
             .donation-grid,
+            .every-grid,
             .why-grid {
-                grid-template-columns: 1fr 1fr;
+
+                grid-template-columns:
+                    repeat(2, 1fr);
             }
+
         }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
 
         @media (max-width: 600px) {
 
             .donation-grid,
+            .every-grid,
             .why-grid {
+
                 grid-template-columns: 1fr;
             }
 
             .page-hero {
+
                 padding: 80px 20px;
             }
 
             .page-hero h1 {
+
                 font-size: 40px;
             }
 
             .details-box {
+
                 padding: 25px 20px;
             }
 
             .bank-row {
+
                 flex-direction: column;
+
                 gap: 5px;
             }
+
+            .every-card {
+
+                padding: 30px 20px;
+            }
+
         }
+
     </style>
+
 </head>
 
+
 <body>
+
 
 <!-- =========================
      CENTRAL EDGF HEADER
@@ -395,8 +693,9 @@
     <h1>Support EDGF</h1>
 
     <p>
-        Your contribution can help strengthen enterprises, improve governance,
-        develop skills and create sustainable opportunities.
+        Your contribution can help strengthen enterprises,
+        improve governance, develop skills and create
+        sustainable opportunities.
     </p>
 
 </section>
@@ -414,7 +713,9 @@
 
             <h2>Make a Difference</h2>
 
-            <p>Every contribution can support meaningful development.</p>
+            <p>
+                Every contribution can support meaningful development.
+            </p>
 
         </div>
 
@@ -422,16 +723,17 @@
 
             <p>
                 EDGF seeks to work with individuals, organizations,
-                businesses, development partners and communities to implement
-                programmes that create sustainable impact.
+                businesses, development partners and communities
+                to implement programmes that create sustainable impact.
             </p>
 
             <br>
 
             <p>
-                Your financial contribution can help us support enterprise
-                development, governance strengthening, skills development,
-                digital innovation, research and community initiatives.
+                Your financial contribution can help us support
+                enterprise development, governance strengthening,
+                skills development, digital innovation, research
+                and community initiatives.
             </p>
 
         </div>
@@ -459,21 +761,30 @@
 
         </div>
 
+
         <div class="donation-grid">
 
+
             <div class="donation-card">
 
-                <div class="donation-icon">🏦</div>
+                <div class="donation-icon">
+                    🏦
+                </div>
 
-                <h3>Bank Transfer</h3>
+                <h3>
+                    Bank Transfer
+                </h3>
 
                 <p>
-                    Support EDGF through a direct bank transfer using our
-                    official account details.
+                    Support EDGF through a direct bank transfer
+                    using our official account details.
                 </p>
 
-                <a href="#bank-details" class="donate-now">
+                <a href="#bank-details"
+                   class="donate-now">
+
                     View Details
+
                 </a>
 
             </div>
@@ -481,17 +792,24 @@
 
             <div class="donation-card">
 
-                <div class="donation-icon">📱</div>
+                <div class="donation-icon">
+                    📱
+                </div>
 
-                <h3>Mobile Money</h3>
+                <h3>
+                    Mobile Money
+                </h3>
 
                 <p>
-                    Mobile money donation options can provide a convenient
-                    way to support EDGF.
+                    Mobile money donation options can provide
+                    a convenient way to support EDGF.
                 </p>
 
-                <a href="#mobile-money" class="donate-now">
+                <a href="#mobile-money"
+                   class="donate-now">
+
                     View Details
+
                 </a>
 
             </div>
@@ -499,20 +817,28 @@
 
             <div class="donation-card">
 
-                <div class="donation-icon">💳</div>
+                <div class="donation-icon">
+                    💳
+                </div>
 
-                <h3>Online Donation</h3>
+                <h3>
+                    Every.org
+                </h3>
 
                 <p>
-                    An online donation facility can make it easier for
-                    supporters to contribute from anywhere.
+                    Make a secure online donation to EDGF
+                    through Every.org.
                 </p>
 
-                <a href="#online-donation" class="donate-now">
+                <a href="#every-donations"
+                   class="donate-now">
+
                     Donate Online
+
                 </a>
 
             </div>
+
 
         </div>
 
@@ -525,7 +851,8 @@
      BANK DETAILS
 ========================= -->
 
-<section class="details-section" id="bank-details">
+<section class="details-section"
+         id="bank-details">
 
     <div class="container">
 
@@ -539,50 +866,88 @@
 
         </div>
 
+
         <div class="details-box">
 
-            <h3>Bank Account Details</h3>
+            <h3>
+                Bank Account Details
+            </h3>
+
 
             <div class="bank-row">
-                <strong>Account Name</strong>
+
+                <strong>
+                    Account Name
+                </strong>
+
                 <span class="placeholder">
                     TO BE PROVIDED
                 </span>
+
             </div>
 
+
             <div class="bank-row">
-                <strong>Bank Name</strong>
+
+                <strong>
+                    Bank Name
+                </strong>
+
                 <span class="placeholder">
                     TO BE PROVIDED
                 </span>
+
             </div>
 
+
             <div class="bank-row">
-                <strong>Account Number</strong>
+
+                <strong>
+                    Account Number
+                </strong>
+
                 <span class="placeholder">
                     TO BE PROVIDED
                 </span>
+
             </div>
 
+
             <div class="bank-row">
-                <strong>Branch</strong>
+
+                <strong>
+                    Branch
+                </strong>
+
                 <span class="placeholder">
                     TO BE PROVIDED
                 </span>
+
             </div>
 
+
             <div class="bank-row">
-                <strong>SWIFT/BIC</strong>
+
+                <strong>
+                    SWIFT/BIC
+                </strong>
+
                 <span class="placeholder">
                     TO BE PROVIDED
                 </span>
+
             </div>
+
 
             <div style="margin-top:25px;">
 
-                <strong>Important:</strong>
-                Please use only the official EDGF banking information
-                published on this website when making a donation.
+                <strong>
+                    Important:
+                </strong>
+
+                Please use only the official EDGF banking
+                information published on this website
+                when making a donation.
 
             </div>
 
@@ -603,7 +968,9 @@
 
         <div class="section-title">
 
-            <h2>Mobile Money</h2>
+            <h2>
+                Mobile Money
+            </h2>
 
             <p>
                 Convenient options for local supporters.
@@ -611,29 +978,50 @@
 
         </div>
 
+
         <div class="details-box">
 
-            <h3>Mobile Money Details</h3>
+            <h3>
+                Mobile Money Details
+            </h3>
+
 
             <div class="bank-row">
-                <strong>Network</strong>
+
+                <strong>
+                    Network
+                </strong>
+
                 <span class="placeholder">
                     TO BE PROVIDED
                 </span>
+
             </div>
 
-            <div class="bank-row">
-                <strong>Account/Phone Number</strong>
-                <span class="placeholder">
-                    TO BE PROVIDED
-                </span>
-            </div>
 
             <div class="bank-row">
-                <strong>Account Name</strong>
+
+                <strong>
+                    Account/Phone Number
+                </strong>
+
                 <span class="placeholder">
                     TO BE PROVIDED
                 </span>
+
+            </div>
+
+
+            <div class="bank-row">
+
+                <strong>
+                    Account Name
+                </strong>
+
+                <span class="placeholder">
+                    TO BE PROVIDED
+                </span>
+
             </div>
 
         </div>
@@ -644,39 +1032,128 @@
 
 
 <!-- =========================
-     ONLINE DONATION
+     EVERY.ORG DONATIONS
 ========================= -->
 
-<section class="details-section" id="online-donation">
+<section class="every-donation-section"
+         id="every-donations">
 
     <div class="container">
 
         <div class="section-title">
 
-            <h2>Online Donation</h2>
+            <h2>
+                Donate Through Every.org
+            </h2>
 
             <p>
-                Support EDGF securely online.
+                Support EDGF through the donation option
+                that works best for you.
             </p>
 
         </div>
 
-        <div class="details-box" style="text-align:center;">
 
-            <h3>Donate Online</h3>
+        <div class="every-intro">
 
             <p>
-                EDGF's online donation facility will be connected here
-                once the preferred payment platform has been configured.
+                EDGF accepts cash, cryptocurrency and stock
+                gifts through Every.org. Choose an option below
+                to proceed with your donation.
             </p>
 
-            <br>
+        </div>
 
-            <a href="contact.html" class="donate-now">
-                Contact Us About Donating
-            </a>
+
+        <div class="every-grid">
+
+
+            <!-- CASH -->
+
+            <div class="every-card">
+
+                <h3>
+                    Cash Donation
+                </h3>
+
+                <p>
+                    Make a cash donation to support EDGF's
+                    programmes and community development work.
+                </p>
+
+                <a
+                    href="https://www.every.org/edgf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="every-button">
+
+                    Donate Cash
+
+                </a>
+
+            </div>
+
+
+            <!-- CRYPTO -->
+
+            <div class="every-card">
+
+                <h3>
+                    Crypto Donation
+                </h3>
+
+                <p>
+                    Support EDGF through a cryptocurrency gift
+                    using Every.org's crypto donation option.
+                </p>
+
+                <a
+                    href="https://www.every.org/edgf/#donate/crypto"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="every-button">
+
+                    Donate Crypto
+
+                </a>
+
+            </div>
+
+
+            <!-- STOCK -->
+
+            <div class="every-card">
+
+                <h3>
+                    Stock Donation
+                </h3>
+
+                <p>
+                    Support EDGF by making a stock gift through
+                    Every.org.
+                </p>
+
+                <a
+                    href="https://www.every.org/edgf/#donate/stocks"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="every-button">
+
+                    Donate Stock
+
+                </a>
+
+            </div>
+
 
         </div>
+
+
+        <p class="every-note">
+
+            Donations are processed through Every.org.
+
+        </p>
 
     </div>
 
@@ -693,30 +1170,40 @@
 
         <div class="section-title">
 
-            <h2>What Your Support Can Help Us Do</h2>
+            <h2>
+                What Your Support Can Help Us Do
+            </h2>
 
             <p>
-                Contributions can help advance our development objectives.
+                Contributions can help advance our
+                development objectives.
             </p>
 
         </div>
 
+
         <div class="why-grid">
+
 
             <div class="why-card">
 
-                <h3>Enterprise Development</h3>
+                <h3>
+                    Enterprise Development
+                </h3>
 
                 <p>
-                    Support entrepreneurship, enterprise skills, business
-                    development and innovation.
+                    Support entrepreneurship, enterprise skills,
+                    business development and innovation.
                 </p>
 
             </div>
 
+
             <div class="why-card">
 
-                <h3>Good Governance</h3>
+                <h3>
+                    Good Governance
+                </h3>
 
                 <p>
                     Support initiatives that promote transparency,
@@ -726,27 +1213,35 @@
 
             </div>
 
+
             <div class="why-card">
 
-                <h3>Skills Development</h3>
+                <h3>
+                    Skills Development
+                </h3>
 
                 <p>
-                    Help provide training and capacity-building opportunities
-                    for young people and other beneficiaries.
+                    Help provide training and capacity-building
+                    opportunities for young people and other
+                    beneficiaries.
                 </p>
 
             </div>
 
+
             <div class="why-card">
 
-                <h3>Community Initiatives</h3>
+                <h3>
+                    Community Initiatives
+                </h3>
 
                 <p>
-                    Support community-led solutions and sustainable
-                    development initiatives.
+                    Support community-led solutions and
+                    sustainable development initiatives.
                 </p>
 
             </div>
+
 
         </div>
 
@@ -765,24 +1260,32 @@
 
         <div class="section-title">
 
-            <h2>Transparency & Accountability</h2>
+            <h2>
+                Transparency & Accountability
+            </h2>
 
             <p>
-                We believe supporters deserve to know how resources are used.
+                We believe supporters deserve to know
+                how resources are used.
             </p>
 
         </div>
 
+
         <div class="transparency-box">
 
-            <h3>Responsible Use of Resources</h3>
+            <h3>
+                Responsible Use of Resources
+            </h3>
 
             <p>
-                EDGF is committed to responsible stewardship of funds
-                entrusted to the organization. Information about supported
-                programmes, activities and relevant financial or impact
-                reports can be made available to stakeholders in accordance
-                with applicable policies and requirements.
+                EDGF is committed to responsible stewardship
+                of funds entrusted to the organization.
+                Information about supported programmes,
+                activities and relevant financial or impact
+                reports can be made available to stakeholders
+                in accordance with applicable policies and
+                requirements.
             </p>
 
         </div>
@@ -802,7 +1305,9 @@
 
         <div class="section-title">
 
-            <h2>Frequently Asked Questions</h2>
+            <h2>
+                Frequently Asked Questions
+            </h2>
 
             <p>
                 Common questions about supporting EDGF.
@@ -810,22 +1315,28 @@
 
         </div>
 
+
         <div class="faq">
 
+
             <div class="faq-item">
 
                 <button
                     class="faq-question"
                     onclick="toggleFAQ(this)">
+
                     How can I donate to EDGF?
+
                 </button>
+
 
                 <div class="faq-answer">
 
                     <p>
-                        You will be able to donate through the official bank,
-                        mobile money or online payment options published on
-                        this page.
+                        You can support EDGF through bank transfer,
+                        mobile money when available, or through
+                        Every.org using cash, cryptocurrency or
+                        stock donations.
                     </p>
 
                 </div>
@@ -838,15 +1349,19 @@
                 <button
                     class="faq-question"
                     onclick="toggleFAQ(this)">
+
                     Can organizations make donations?
+
                 </button>
+
 
                 <div class="faq-answer">
 
                     <p>
-                        Yes. Organizations and institutions can support EDGF
-                        through financial contributions, partnerships,
-                        sponsorships or other forms of support.
+                        Yes. Organizations and institutions can
+                        support EDGF through financial contributions,
+                        partnerships, sponsorships or other forms
+                        of support.
                     </p>
 
                 </div>
@@ -859,15 +1374,19 @@
                 <button
                     class="faq-question"
                     onclick="toggleFAQ(this)">
+
                     Can I support a specific project?
+
                 </button>
+
 
                 <div class="faq-answer">
 
                     <p>
-                        Where project-specific funding opportunities are
-                        available, supporters can contact EDGF to discuss
-                        the programme or project they wish to support.
+                        Where project-specific funding opportunities
+                        are available, supporters can contact EDGF
+                        to discuss the programme or project they
+                        wish to support.
                     </p>
 
                 </div>
@@ -880,20 +1399,24 @@
                 <button
                     class="faq-question"
                     onclick="toggleFAQ(this)">
+
                     How will my contribution be acknowledged?
+
                 </button>
+
 
                 <div class="faq-answer">
 
                     <p>
-                        EDGF can provide appropriate acknowledgement or
-                        confirmation of contributions in accordance with its
-                        policies and donor requirements.
+                        EDGF can provide appropriate acknowledgement
+                        or confirmation of contributions in accordance
+                        with its policies and donor requirements.
                     </p>
 
                 </div>
 
             </div>
+
 
         </div>
 
@@ -910,21 +1433,34 @@
 
     <div class="container">
 
-        <h2>Ready to Support EDGF?</h2>
+        <h2>
+            Ready to Support EDGF?
+        </h2>
 
         <p>
-            Every contribution can help us create opportunities, strengthen
-            institutions and support sustainable development.
+            Every contribution can help us create opportunities,
+            strengthen institutions and support sustainable
+            development.
         </p>
+
 
         <div class="cta-buttons">
 
-            <a href="#bank-details" class="cta-donate">
-                Donate
+            <a
+                href="#every-donations"
+                class="cta-donate">
+
+                Donate Now
+
             </a>
 
-            <a href="contact.html" class="cta-contact">
+
+            <a
+                href="contact.html"
+                class="cta-contact">
+
                 Contact Us
+
             </a>
 
         </div>
@@ -949,8 +1485,11 @@
     class="whatsapp"
     href="https://wa.me/"
     target="_blank"
+    rel="noopener noreferrer"
     aria-label="Contact EDGF on WhatsApp">
+
     ☎
+
 </a>
 
 
@@ -960,5 +1499,25 @@
 
 <script src="script.js"></script>
 
+
+<!-- =========================
+     FAQ SCRIPT
+========================= -->
+
+<script>
+
+function toggleFAQ(button) {
+
+    const answer =
+        button.nextElementSibling;
+
+    answer.classList.toggle("show");
+
+}
+
+</script>
+
+
 </body>
+
 </html>
