@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <title>Gallery | EDGF</title>
 
-    <meta name="description" content="Explore photos and highlights from Enterprise Development & Governance Facility activities, programmes and projects.">
+    <meta name="description"
+          content="Explore photographs from Enterprise Development & Governance Facility activities, programmes, projects and community engagement.">
 
     <link rel="stylesheet" href="style.css">
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -25,356 +31,624 @@
             font-family: Arial, Helvetica, sans-serif;
             line-height: 1.6;
             color: #222;
-            background: #fff;
+            background: #ffffff;
         }
+
 
         /* =========================
            PAGE HERO
         ========================= */
 
         .page-hero {
-            background:
-                linear-gradient(rgba(0,60,45,0.78), rgba(0,60,45,0.78)),
-                url("https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1600&q=80")
-                center/cover no-repeat;
 
-            color: white;
+            background:
+                linear-gradient(
+                    rgba(0,60,45,0.78),
+                    rgba(0,60,45,0.78)
+                ),
+                url("https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1600&q=80")
+                center / cover no-repeat;
+
+            color: #ffffff;
+
             text-align: center;
+
             padding: 100px 20px;
         }
 
         .page-hero h1 {
+
             font-size: clamp(40px, 6vw, 65px);
+
             margin-bottom: 15px;
         }
 
         .page-hero p {
+
             max-width: 800px;
+
             margin: auto;
+
             font-size: 19px;
         }
+
 
         /* =========================
            GENERAL
         ========================= */
 
         section {
+
             padding: 75px 20px;
         }
 
         .container {
+
             max-width: 1150px;
+
             margin: auto;
         }
 
         .section-title {
+
             text-align: center;
+
             margin-bottom: 45px;
         }
 
         .section-title h2 {
+
             color: #0b6b4f;
+
             font-size: 36px;
+
             margin-bottom: 10px;
         }
 
         .section-title p {
-            color: #666;
+
+            color: #666666;
         }
+
 
         /* =========================
            INTRO
         ========================= */
 
         .intro {
+
             text-align: center;
         }
 
         .intro-text {
+
             max-width: 850px;
+
             margin: auto;
+
             font-size: 18px;
         }
+
+
+        /* =========================
+           OFFICIAL FLICKR ARCHIVE
+        ========================= */
+
+        .official-gallery {
+
+            background: #f7faf9;
+
+            text-align: center;
+        }
+
+        .official-gallery-box {
+
+            max-width: 900px;
+
+            margin: auto;
+
+            background: #ffffff;
+
+            padding: 40px 30px;
+
+            border-radius: 12px;
+
+            box-shadow:
+                0 5px 20px rgba(0,0,0,0.06);
+
+            border-top: 5px solid #0b6b4f;
+        }
+
+        .official-gallery-box h3 {
+
+            color: #0b6b4f;
+
+            font-size: 28px;
+
+            margin-bottom: 15px;
+        }
+
+        .official-gallery-box p {
+
+            max-width: 720px;
+
+            margin: 0 auto 25px;
+
+            color: #555;
+
+            font-size: 17px;
+        }
+
+        .flickr-button {
+
+            display: inline-block;
+
+            background: #d69e2e;
+
+            color: #ffffff;
+
+            text-decoration: none;
+
+            padding: 13px 25px;
+
+            border-radius: 5px;
+
+            font-weight: bold;
+
+            transition:
+                transform 0.3s ease,
+                background 0.3s ease;
+        }
+
+        .flickr-button:hover {
+
+            background: #b98720;
+
+            transform: translateY(-2px);
+        }
+
 
         /* =========================
            FILTER BUTTONS
         ========================= */
 
         .filters {
+
             display: flex;
+
             justify-content: center;
+
             flex-wrap: wrap;
+
             gap: 10px;
+
             margin-bottom: 35px;
         }
 
         .filter-btn {
+
             border: 2px solid #0b6b4f;
-            background: white;
+
+            background: #ffffff;
+
             color: #0b6b4f;
+
             padding: 9px 18px;
+
             border-radius: 25px;
+
             cursor: pointer;
+
             font-weight: bold;
+
             transition: 0.3s;
         }
 
         .filter-btn:hover,
         .filter-btn.active {
+
             background: #0b6b4f;
-            color: white;
+
+            color: #ffffff;
         }
+
 
         /* =========================
            GALLERY
         ========================= */
 
         .gallery-grid {
+
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
             gap: 20px;
         }
 
         .gallery-item {
+
             position: relative;
+
             height: 250px;
+
             border-radius: 10px;
+
             overflow: hidden;
+
             cursor: pointer;
-            background: #eee;
+
+            background: #eeeeee;
         }
 
         .gallery-item img {
+
             width: 100%;
+
             height: 100%;
+
             object-fit: cover;
+
             display: block;
-            transition: transform 0.5s ease;
+
+            transition:
+                transform 0.5s ease;
         }
 
         .gallery-item:hover img {
+
             transform: scale(1.08);
         }
 
         .gallery-caption {
+
             position: absolute;
+
             left: 0;
+
             right: 0;
+
             bottom: 0;
+
             padding: 15px;
-            color: white;
-            background: linear-gradient(
-                transparent,
-                rgba(0,0,0,0.8)
-            );
+
+            color: #ffffff;
+
+            background:
+                linear-gradient(
+                    transparent,
+                    rgba(0,0,0,0.8)
+                );
+
             font-weight: bold;
         }
 
         .gallery-item.hide {
+
             display: none;
         }
+
 
         /* =========================
            LIGHTBOX
         ========================= */
 
         .lightbox {
+
             display: none;
+
             position: fixed;
+
             z-index: 5000;
+
             inset: 0;
+
             background: rgba(0,0,0,0.94);
+
             align-items: center;
+
             justify-content: center;
+
             padding: 50px 70px;
         }
 
         .lightbox.show {
+
             display: flex;
         }
 
         .lightbox-content {
+
             max-width: 90%;
+
             max-height: 85vh;
+
             border-radius: 6px;
+
             object-fit: contain;
         }
 
         .lightbox-caption {
+
             position: absolute;
+
             bottom: 25px;
+
             left: 50%;
+
             transform: translateX(-50%);
-            color: white;
+
+            color: #ffffff;
+
             font-size: 17px;
+
             text-align: center;
+
             max-width: 80%;
         }
 
         .close-lightbox,
         .prev,
         .next {
+
             position: absolute;
-            color: white;
+
+            color: #ffffff;
+
             cursor: pointer;
+
             border: none;
-            background: rgba(0,0,0,0.35);
+
+            background:
+                rgba(0,0,0,0.35);
+
             width: 48px;
+
             height: 48px;
+
             border-radius: 50%;
+
             font-size: 30px;
+
             display: flex;
+
             align-items: center;
+
             justify-content: center;
         }
 
         .close-lightbox {
+
             top: 20px;
+
             right: 25px;
         }
 
         .prev {
+
             left: 20px;
+
             top: 50%;
+
             transform: translateY(-50%);
         }
 
         .next {
+
             right: 20px;
+
             top: 50%;
+
             transform: translateY(-50%);
         }
 
         .close-lightbox:hover,
         .prev:hover,
         .next:hover {
-            background: rgba(255,255,255,0.2);
+
+            background:
+                rgba(255,255,255,0.2);
         }
+
 
         /* =========================
            GALLERY NOTE
         ========================= */
 
         .gallery-note {
+
             margin-top: 40px;
+
             padding: 25px;
+
             background: #f7faf9;
-            border-left: 5px solid #d69e2e;
+
+            border-left:
+                5px solid #d69e2e;
+
             border-radius: 5px;
+
             text-align: center;
         }
+
 
         /* =========================
            CTA
         ========================= */
 
         .cta-section {
+
             background: #0b6b4f;
-            color: white;
+
+            color: #ffffff;
+
             text-align: center;
         }
 
         .cta-section h2 {
+
             font-size: 38px;
+
             margin-bottom: 15px;
         }
 
         .cta-section p {
+
             max-width: 750px;
+
             margin: 0 auto 25px;
         }
 
         .cta-buttons {
+
             display: flex;
+
             justify-content: center;
+
             gap: 15px;
+
             flex-wrap: wrap;
         }
 
         .cta-buttons a {
+
             text-decoration: none;
+
             padding: 13px 25px;
+
             border-radius: 5px;
+
             font-weight: bold;
         }
 
         .cta-donate {
+
             background: #d69e2e;
-            color: white;
+
+            color: #ffffff;
         }
 
         .cta-contact {
-            background: white;
+
+            background: #ffffff;
+
             color: #0b6b4f;
         }
+
 
         /* =========================
            WHATSAPP
         ========================= */
 
         .whatsapp {
+
             position: fixed;
+
             right: 20px;
+
             bottom: 20px;
+
             width: 55px;
+
             height: 55px;
+
             border-radius: 50%;
+
             background: #25D366;
-            color: white;
+
+            color: #ffffff;
+
             display: flex;
+
             align-items: center;
+
             justify-content: center;
+
             text-decoration: none;
+
             font-size: 26px;
+
             z-index: 2000;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+
+            box-shadow:
+                0 4px 15px rgba(0,0,0,0.25);
         }
 
+
         /* =========================
-           MOBILE
+           TABLET
         ========================= */
 
         @media (max-width: 900px) {
 
             .gallery-grid {
-                grid-template-columns: 1fr 1fr;
+
+                grid-template-columns:
+                    repeat(2, 1fr);
             }
         }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
 
         @media (max-width: 600px) {
 
             .gallery-grid {
+
                 grid-template-columns: 1fr;
             }
 
             .gallery-item {
+
                 height: 260px;
             }
 
             .page-hero {
+
                 padding: 80px 20px;
             }
 
             .page-hero h1 {
+
                 font-size: 40px;
             }
 
+            .official-gallery-box {
+
+                padding: 30px 20px;
+            }
+
+            .official-gallery-box h3 {
+
+                font-size: 24px;
+            }
+
             .lightbox {
+
                 padding: 40px 15px;
             }
 
             .prev {
+
                 left: 8px;
             }
 
             .next {
+
                 right: 8px;
             }
         }
+
     </style>
+
 </head>
 
+
 <body>
+
 
 <!-- =========================
      CENTRAL HEADER
@@ -392,8 +666,8 @@
     <h1>Gallery</h1>
 
     <p>
-        A visual record of EDGF activities, programmes, projects,
-        events and community engagement.
+        A visual record of EDGF activities, programmes,
+        projects, events and community engagement.
     </p>
 
 </section>
@@ -409,7 +683,9 @@
 
         <div class="section-title">
 
-            <h2>Our Activities in Pictures</h2>
+            <h2>
+                Our Activities in Pictures
+            </h2>
 
             <p>
                 Documenting our work and the communities we serve
@@ -420,7 +696,7 @@
         <div class="intro-text">
 
             <p>
-                This gallery will showcase photographs from EDGF's
+                This gallery showcases photographs from EDGF's
                 programmes, projects, training sessions, meetings,
                 community activities, partnerships and events.
             </p>
@@ -428,9 +704,59 @@
             <br>
 
             <p>
-                As activities take place, the gallery can be updated with
-                photographs and captions to document EDGF's work and impact.
+                We also maintain an official EDGF photo archive on
+                Flickr where additional photographs from our activities
+                can be viewed.
             </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     OFFICIAL EDGF PHOTO ARCHIVE
+========================= -->
+
+<section class="official-gallery">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>
+                Official EDGF Photo Archive
+            </h2>
+
+            <p>
+                Explore photographs from EDGF activities and programmes.
+            </p>
+
+        </div>
+
+        <div class="official-gallery-box">
+
+            <h3>
+                EDGF PICTURES
+            </h3>
+
+            <p>
+                Visit the official EDGF Flickr photo archive to explore
+                photographs documenting the organisation's activities,
+                programmes, events and community engagement.
+            </p>
+
+            <a
+                href="https://www.flickr.com/photos/76650892@N05/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flickr-button">
+
+                View Official EDGF Photo Archive
+
+            </a>
 
         </div>
 
@@ -449,10 +775,13 @@
 
         <div class="section-title">
 
-            <h2>Photo Gallery</h2>
+            <h2>
+                Photo Gallery
+            </h2>
 
             <p>
-                Select a category or click any photograph to enlarge it.
+                Select a category or click any photograph
+                to enlarge it.
             </p>
 
         </div>
@@ -465,31 +794,41 @@
             <button
                 class="filter-btn active"
                 onclick="filterGallery('all', this)">
+
                 All
+
             </button>
 
             <button
                 class="filter-btn"
                 onclick="filterGallery('projects', this)">
+
                 Projects
+
             </button>
 
             <button
                 class="filter-btn"
                 onclick="filterGallery('training', this)">
+
                 Training
+
             </button>
 
             <button
                 class="filter-btn"
                 onclick="filterGallery('events', this)">
+
                 Events
+
             </button>
 
             <button
                 class="filter-btn"
                 onclick="filterGallery('community', this)">
+
                 Community
+
             </button>
 
         </div>
@@ -499,7 +838,10 @@
              GALLERY GRID
         ========================= -->
 
-        <div class="gallery-grid" id="galleryGrid">
+        <div
+            class="gallery-grid"
+            id="galleryGrid">
+
 
             <div
                 class="gallery-item"
@@ -692,14 +1034,30 @@
 
             </div>
 
+
         </div>
 
 
+        <!-- =========================
+             GALLERY NOTE
+        ========================= -->
+
         <div class="gallery-note">
 
-            <strong>EDGF Photo Archive:</strong>
-            Official photographs from EDGF programmes and activities can
-            be uploaded here as the organisation's work progresses.
+            <strong>
+                Official EDGF Photo Archive:
+            </strong>
+
+            For the full collection of EDGF photographs,
+            please visit the official
+            <a
+                href="https://www.flickr.com/photos/76650892@N05/"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                EDGF PICTURES Flickr archive.
+
+            </a>
 
         </div>
 
@@ -716,21 +1074,32 @@
 
     <div class="container">
 
-        <h2>Support Our Work</h2>
+        <h2>
+            Support Our Work
+        </h2>
 
         <p>
-            Help us document, expand and strengthen programmes that create
-            sustainable opportunities for communities and enterprises.
+            Help us document, expand and strengthen programmes
+            that create sustainable opportunities for communities
+            and enterprises.
         </p>
 
         <div class="cta-buttons">
 
-            <a href="donations.html" class="cta-donate">
+            <a
+                href="donations.html"
+                class="cta-donate">
+
                 Donate
+
             </a>
 
-            <a href="contact.html" class="cta-contact">
+            <a
+                href="contact.html"
+                class="cta-contact">
+
                 Contact Us
+
             </a>
 
         </div>
@@ -755,8 +1124,11 @@
     class="whatsapp"
     href="https://wa.me/"
     target="_blank"
+    rel="noopener noreferrer"
     aria-label="Contact EDGF on WhatsApp">
+
     ☎
+
 </a>
 
 
@@ -849,6 +1221,7 @@ const galleryImages = [
 
 ];
 
+
 let currentImage = 0;
 
 
@@ -862,7 +1235,9 @@ function openLightbox(index) {
 
     updateLightbox();
 
-    document.getElementById("lightbox").classList.add("show");
+    document
+        .getElementById("lightbox")
+        .classList.add("show");
 
     document.body.style.overflow = "hidden";
 }
@@ -874,12 +1249,16 @@ function openLightbox(index) {
 
 function updateLightbox() {
 
-    const image = galleryImages[currentImage];
+    const image =
+        galleryImages[currentImage];
 
-    document.getElementById("lightboxImage").src = image.src;
+    document
+        .getElementById("lightboxImage")
+        .src = image.src;
 
-    document.getElementById("lightboxCaption").textContent =
-        image.caption;
+    document
+        .getElementById("lightboxCaption")
+        .textContent = image.caption;
 }
 
 
@@ -891,12 +1270,16 @@ function closeLightbox(event) {
 
     if (
         event &&
-        event.target !== document.getElementById("lightbox")
+        event.target !==
+        document.getElementById("lightbox")
     ) {
+
         return;
     }
 
-    document.getElementById("lightbox").classList.remove("show");
+    document
+        .getElementById("lightbox")
+        .classList.remove("show");
 
     document.body.style.overflow = "";
 }
@@ -909,12 +1292,17 @@ function closeLightbox(event) {
 function nextImage(event) {
 
     if (event) {
+
         event.stopPropagation();
     }
 
     currentImage++;
 
-    if (currentImage >= galleryImages.length) {
+    if (
+        currentImage >=
+        galleryImages.length
+    ) {
+
         currentImage = 0;
     }
 
@@ -929,13 +1317,16 @@ function nextImage(event) {
 function previousImage(event) {
 
     if (event) {
+
         event.stopPropagation();
     }
 
     currentImage--;
 
     if (currentImage < 0) {
-        currentImage = galleryImages.length - 1;
+
+        currentImage =
+            galleryImages.length - 1;
     }
 
     updateLightbox();
@@ -949,18 +1340,25 @@ function previousImage(event) {
 function filterGallery(category, button) {
 
     const items =
-        document.querySelectorAll(".gallery-item");
+        document.querySelectorAll(
+            ".gallery-item"
+        );
 
     const buttons =
-        document.querySelectorAll(".filter-btn");
+        document.querySelectorAll(
+            ".filter-btn"
+        );
 
-    buttons.forEach(btn => {
+    buttons.forEach(function(btn) {
+
         btn.classList.remove("active");
+
     });
 
     button.classList.add("active");
 
-    items.forEach(item => {
+
+    items.forEach(function(item) {
 
         if (
             category === "all" ||
@@ -984,28 +1382,41 @@ function filterGallery(category, button) {
    KEYBOARD CONTROLS
 ========================= */
 
-document.addEventListener("keydown", function(event) {
+document.addEventListener(
+    "keydown",
+    function(event) {
 
-    const lightbox =
-        document.getElementById("lightbox");
+        const lightbox =
+            document.getElementById(
+                "lightbox"
+            );
 
-    if (!lightbox.classList.contains("show")) {
-        return;
+        if (
+            !lightbox.classList.contains(
+                "show"
+            )
+        ) {
+
+            return;
+        }
+
+        if (event.key === "Escape") {
+
+            closeLightbox();
+        }
+
+        if (event.key === "ArrowRight") {
+
+            nextImage(event);
+        }
+
+        if (event.key === "ArrowLeft") {
+
+            previousImage(event);
+        }
+
     }
-
-    if (event.key === "Escape") {
-        closeLightbox();
-    }
-
-    if (event.key === "ArrowRight") {
-        nextImage(event);
-    }
-
-    if (event.key === "ArrowLeft") {
-        previousImage(event);
-    }
-
-});
+);
 
 </script>
 
@@ -1019,17 +1430,24 @@ document.addEventListener("keydown", function(event) {
     id="lightbox"
     onclick="closeLightbox(event)">
 
+
     <button
         class="close-lightbox"
         onclick="closeLightbox()">
+
         ×
+
     </button>
+
 
     <button
         class="prev"
         onclick="previousImage(event)">
+
         ‹
+
     </button>
+
 
     <img
         id="lightboxImage"
@@ -1037,18 +1455,26 @@ document.addEventListener("keydown", function(event) {
         src=""
         alt="Gallery image">
 
+
     <button
         class="next"
         onclick="nextImage(event)">
+
         ›
+
     </button>
+
 
     <div
         id="lightboxCaption"
         class="lightbox-caption">
+
     </div>
+
 
 </div>
 
+
 </body>
+
 </html>
